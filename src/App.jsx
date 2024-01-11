@@ -6,7 +6,7 @@ import Main from "./container/Main";
 import { themes } from "./theme";
 
 function App() {
-  const [themeMode, setThemeMode] = useState("light");
+  const [themeMode, setThemeMode] = useState("dark");
 
   return (
     <>
