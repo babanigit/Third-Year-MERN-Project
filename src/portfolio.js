@@ -12,11 +12,10 @@ const greeting = {
   title: "Hello.",
   title2: "Aniket",
   logo_name: "BMI",
-  nickname: "ani / bablu",
-  full_name: "Aniket Panchal",
-  subTitle: "Full Stack Developer, digital Artist. Always learning.",
-  resumeLink:"https://drive.google.com/file/d/1vrH2TG_69x0BslVAYGnNDpzCPCczuPXb/view?usp=sharing/view",
-  mail: "aniketpanchal07@gmail.com",
+  // nickname: "",
+  // full_name: "",
+  // subTitle: "
+  // mail: "",
 };
 
 const socialMediaLinks = {
