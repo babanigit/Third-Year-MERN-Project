@@ -6,7 +6,12 @@ const Updates = (props) => {
   return (
     <>
       <div className=" w-screen">
-        <Header theme={props.theme} setTheme={props.setTheme} />
+        <Header
+          theme={props.theme}
+          setTheme={props.setTheme}
+          setTabla={props.setTabla}
+          tabla={props.tabla}
+        />
         <div>updates</div>
       </div>
 

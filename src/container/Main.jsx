@@ -39,6 +39,8 @@ const Main = (props) => {
                   {...props}
                   theme={props.theme}
                   setTheme={props.setTheme}
+                  setTabla={props.setTabla}
+                  tablaMode={props.tabla}
                 />
               }
             />
@@ -50,6 +52,8 @@ const Main = (props) => {
                   {...props}
                   theme={props.theme}
                   setTheme={props.setTheme}
+                  setTabla={props.setTabla}
+                  tabla={props.tabla}
                 />
               }
             />

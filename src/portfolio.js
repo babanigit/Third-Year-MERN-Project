@@ -10,7 +10,7 @@ const settings = {
 //Home Page
 const greeting = {
   title: "Hello.",
-  title2: "Aniket",
+  title2: "TY-BCA",
   logo_name: "BMI",
   // nickname: "",
   // full_name: "",

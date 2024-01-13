@@ -7,12 +7,14 @@ import { themes } from "./theme";
 
 function App() {
   const [themeMode, setThemeMode] = useState("dark");
+  const [tablaMode, setTablaMode] = useState(false)
+  console.log(tablaMode)
 
   return (
     <>
       <ThemeProvider theme={themes[themeMode]}>
         {/* <GlobalStyles/> */}
-        <Main theme={themes[themeMode]} setTheme={setThemeMode} />
+        <Main theme={themes[themeMode]} setTheme={setThemeMode} setTabla={setTablaMode} tabla={tablaMode}/>
       </ThemeProvider>
     </>
   );

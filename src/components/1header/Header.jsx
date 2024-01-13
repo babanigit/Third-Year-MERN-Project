@@ -12,6 +12,7 @@ import Aplayer from "./Aplayer";
 function Header(props) {
   const theme = props.theme;
 
+  console.log("headers -" + props.tabla)
   const styles = style({
     cursor: "pointer",
     height: "45px",
@@ -155,7 +156,7 @@ function Header(props) {
                 {icon}
               </button>
 
-              <button {...styles}>{<Aplayer />}</button>
+              <button {...styles}>{<Aplayer  setTabla={props.setTabla}  tabla={props.tabla}/>}</button>
               {/* <button {...styles}>{<Aplayer2 />}</button> */}
             </div>
           </ul>
