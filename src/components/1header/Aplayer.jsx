@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import AudioFile from "./tabla.mp3";
 
-audioSong = new Audio(AudioFile);
+// audioSong = new Audio(AudioFile);
 
 class Aplayer extends Component {
   // const [tab,setTab] = useState(this.props.tabla);
@@ -12,7 +12,7 @@ class Aplayer extends Component {
   };
 
   playPause = () => {
-    const myRef = useRef();
+    // const myRef = useRef();
 
     let data = this.state.isPlaying;
 
