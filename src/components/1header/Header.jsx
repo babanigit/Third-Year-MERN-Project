@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Fade } from "react-reveal";
+// import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import { CgSun } from "react-icons/cg";
@@ -66,7 +66,7 @@ function Header(props) {
     );
 
   return (
-    <Fade top duration={1000} distance="20px">
+    // <Fade top duration={1000} distance="20px">
       <div>
         <header
         // style={{background:props.theme.body}}
@@ -162,7 +162,7 @@ function Header(props) {
           </ul>
         </header>
       </div>
-    </Fade>
+    // </Fade>
   );
 }
 
