@@ -7,7 +7,7 @@ import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import { style } from "glamor";
 
-import Aplayer from "./Aplayer";
+import Aplayer from "./Aplayer.jsx";
 
 function Header(props) {
   const theme = props.theme;
