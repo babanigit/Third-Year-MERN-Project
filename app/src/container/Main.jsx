@@ -8,6 +8,7 @@ import Updates from "../pages/2updates,NewsAndAdmissions/Updates";
 import Gallery from "../pages/3galleryMediaCentre/Gallery";
 import Faculty from "../pages/4facultyProfiles/Faculty";
 import AboutUs from "../pages/5aboutUs,ContactUsAndServices/AboutUs";
+import NotFound from "../components/NotFound";
 
 const Main = (props) => {
   // const theme = props.theme;
@@ -101,6 +102,17 @@ const Main = (props) => {
                 />
               }
             /> 
+              <Route
+              path="/*"
+              exact
+              element={
+                <NotFound
+                  {...props}
+                  theme={props.theme}
+                  setTheme={props.setTheme}
+                />
+              }
+            />
           </Routes>
         </BrowserRouter>
       </div>

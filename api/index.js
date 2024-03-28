@@ -6,6 +6,7 @@ import morgan from "morgan";
 import MongoStore from "connect-mongo";
 import cookieParser from "cookie-parser"
 import session from "express-session";
+import createHttpError, { isHttpError } from "http-errors";
 
 
 import dotenv from 'dotenv';
@@ -49,12 +50,12 @@ app.use(session({
 
 
 
-// use the frontend app
-app.use(express.static(path.join(__dirname, "/app/dist")));
-console.log(__dirname)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/app/dist/index.html'));
-});
+// // use the frontend app
+// app.use(express.static(path.join(__dirname, "/app/dist")));
+// console.log(__dirname)
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '/app/dist/index.html'));
+// });
 
 // database connection
 const connectDb = async () => {
@@ -75,6 +76,16 @@ const connectDb = async () => {
 };
 connectDb();
 
+app.get("/", (req, res, next) => {
+  try {
+    res.status(200).json({
+      message: "API is live ",
+      creator: "Aniket panchal (me)"
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 
 // end point middleware
 app.use((res, req, next) => {
