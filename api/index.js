@@ -12,14 +12,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 const port = process.env.PORT;
 const DB= process.env.DATABASE;
+const __dirname = path.resolve();
 
 
-
+// session
 // we initialize the session method before routes so that all routes can access the session functions
 app.use(session({
   secret: process.env.SESSION_SECRET,
@@ -41,7 +44,19 @@ app.use(session({
   })
 }));
 
-// connection
+
+// routes
+
+
+
+// use the frontend app
+app.use(express.static(path.join(__dirname, "/app/dist")));
+console.log(__dirname)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/app/dist/index.html'));
+});
+
+// database connection
 const connectDb = async () => {
   if (!DB) {
     throw new Error("Database connection string is not provided. -b");
@@ -53,7 +68,6 @@ const connectDb = async () => {
       connect.connection.host,
       connect.connection.name
     );
-
   } catch (error) {
     console.error("failed to connect to the database");
     console.error(error)
@@ -62,7 +76,25 @@ const connectDb = async () => {
 connectDb();
 
 
+// end point middleware
+app.use((res, req, next) => {
+  next(createHttpError(404, "endpoint not found"))
+});
 
+// error handler middleware
+app.use((error, req, res, next) => {
+  console.error(error);
+  let errorMessage = "an unknown error occurred";
+  let statusCode = 500;
+  if (error instanceof Error) errorMessage = error.message;
+  if (isHttpError(error)) {
+    statusCode = error.status;
+    errorMessage = error.message;
+  }
+  res.status(statusCode).json({ error: errorMessage });
+});
+
+// app listen
 app.listen(port, () => {
   console.log(
     `[server]: hello, Server is running at http://localhost:${port}`
