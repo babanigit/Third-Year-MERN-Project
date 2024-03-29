@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import  { useState } from "react";
 import "./Header.css";
@@ -9,6 +10,10 @@ import { HiMoon } from "react-icons/hi";
 import { style } from "glamor";
 
 import Aplayer from "./Aplayer.jsx";
+
+// images
+import tabla1 from '../../assets/pngs/tabla2.png';
+
 
 function Header(props) {
   const theme = props.theme;
@@ -74,9 +79,18 @@ function Header(props) {
         className="header">
           <NavLink to={link} tag={Link} className="logo">
             <span style={{ color: theme.text }}></span>
+            <div  className=" grid grid-flow-col place-items-center">
+
             <span className="logo-name" style={{ color: theme.text }}>
               {greeting.logo_name}
             </span>
+            <div className=" w-9">
+            <img src={tabla1} />
+
+            </div>
+
+            </div>
+           
             <span style={{ color: theme.text }}></span>
           </NavLink>
           <input className="menu-btn" type="checkbox" id="menu-btn" />

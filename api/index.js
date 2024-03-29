@@ -57,6 +57,7 @@ app.use(session({
 //   res.sendFile(path.join(__dirname, '/app/dist/index.html'));
 // });
 
+
 // database connection
 const connectDb = async () => {
   if (!DB) {
