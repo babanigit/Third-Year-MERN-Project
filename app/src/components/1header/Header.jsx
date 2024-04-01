@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
-import  { useState } from "react";
+import { useState } from "react";
 import "./Header.css";
 // import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
@@ -12,13 +12,15 @@ import { style } from "glamor";
 import Aplayer from "./Aplayer.jsx";
 
 // images
-import tabla1 from '../../assets/pngs/tabla2.png';
-
+import tabla1 from "../../assets/pngs/tabla2.png";
+import { useMyContext } from "../../App.jsx";
 
 function Header(props) {
+  const { setThemeMode, setTablaMode, tablaMode, themeMode } = useMyContext();
+
   const theme = props.theme;
 
-  console.log("headers -" + props.tabla)
+  console.log("headers -" + props.tabla);
   const styles = style({
     cursor: "pointer",
     height: "45px",
@@ -45,12 +47,13 @@ function Header(props) {
 
   // function for theme changing
   function changeTheme() {
+    setTablaMode(true);
     if (currTheme === "light") {
-      props.setTheme("dark");
+      setThemeMode("dark");
       // localStorage.setItem("theme", "dark");
       setCurrTheme("dark");
     } else {
-      props.setTheme("light");
+      setThemeMode("light");
       // localStorage.setItem("theme", "light");
       setCurrTheme("light");
     }
@@ -73,110 +76,101 @@ function Header(props) {
 
   return (
     // <Fade top duration={1000} distance="20px">
-      <div>
-        <header
-        // style={{background:props.theme.body}}
-        className="header">
-          <NavLink to={link} tag={Link} className="logo">
-            <span style={{ color: theme.text }}></span>
-            <div  className=" grid grid-flow-col place-items-center">
-
-            <span className="logo-name" style={{ color: theme.text }}>
-              {greeting.logo_name}
-            </span>
-            <div className=" w-9">
+    <header className="header w-screen   ">
+      <NavLink to={link} tag={Link} className="logo">
+        <span></span>
+        <div className=" grid grid-flow-col place-items-center">
+          <span className="logo-name">{greeting.logo_name}</span>
+          <div className=" w-9">
             <img src={tabla1} />
+          </div>
+        </div>
+      </NavLink>
 
-            </div>
+      <input className="menu-btn" type="checkbox" id="menu-btn" />
 
-            </div>
-           
-            <span style={{ color: theme.text }}></span>
+      <label className="menu-icon py-14" htmlFor="menu-btn">
+        <span className="navicon"></span>
+      </label>
+
+      <ul className="menu">
+        <li>
+          <NavLink
+            className="homei"
+            to="/home"
+            tag={Link}
+            activeStyle={{ fontWeight: "bold" }}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            Home
           </NavLink>
-          <input className="menu-btn" type="checkbox" id="menu-btn" />
-          <label className="menu-icon" htmlFor="menu-btn">
-            <span className="navicon"></span>
-          </label>
-          <ul className="menu">
-          <li>
-              <NavLink
-                className="homei"
-                to="/home"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="ec"
-                to="/updates"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                News and Admissions
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="xp"
-                to="/gallery"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Gallery
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="projects"
-                to="/faculty"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Faculty
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="cr"
-                to="/aboutUs"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Aboutus and Contacts
-              </NavLink>
-            </li>
-            {/* <li>
-              <a
-                className="cr"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://play.google.com/store/apps/details?id=com.picle.journalify"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Journalify
-              </a>
-            </li> */}
-            <div className="flex ">
-              <button className=" flex " {...styles} onClick={changeTheme}>
-                {icon}
-              </button>
+        </li>
+        <li>
+          <NavLink
+            className="ec"
+            to="/updates"
+            tag={Link}
+            activeStyle={{ fontWeight: "bold" }}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            News and Admissions
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="xp"
+            to="/gallery"
+            tag={Link}
+            activeStyle={{ fontWeight: "bold" }}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            Gallery
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="projects"
+            to="/faculty"
+            tag={Link}
+            activeStyle={{ fontWeight: "bold" }}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            Faculty
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="cr"
+            to="/aboutUs"
+            tag={Link}
+            activeStyle={{ fontWeight: "bold" }}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            Aboutus and Contacts
+          </NavLink>
+        </li>
 
-              <button {...styles}>{<Aplayer  setTabla={props.setTabla}  tabla={props.tabla}/>}</button>
-              {/* <button {...styles}>{<Aplayer2 />}</button> */}
-            </div>
-          </ul>
-        </header>
-      </div>
+        <div className="flex ">
+          <button className=" flex " {...styles} onClick={changeTheme}>
+            {icon}
+          </button>
+
+          <button
+            className=" flex "
+            {...styles}
+          >
+            {
+              <Aplayer
+                setTabla={setTablaMode}
+                tabla={tablaMode}
+                theme={themeMode}
+              />
+            }
+          </button>
+          {/* <button {...styles}>{<Aplayer2 />}</button> */}
+        </div>
+      </ul>
+    </header>
     // </Fade>
   );
 }

@@ -1,66 +1,41 @@
 /* eslint-disable react/prop-types */
-import { Component } from "react";
+import { useState, useRef } from "react";
 import AudioFile from "./tabla.mp3";
 
-// audioSong = new Audio(AudioFile);
+const Aplayer = (props) => {
+  const audioSong = useRef(new Audio(AudioFile));
 
-class Aplayer extends Component {
-  // const [tab,setTab] = useState(this.props.tabla);
-  audioSong = new Audio(AudioFile);
+  const [isPlaying, setIsPlaying] = useState(props.tabla);
 
-  state = {
-    isPlaying: this.props.tabla,
-  };
+  const playPause = () => {
+    let data = isPlaying;
 
-  playPause = () => {
-    // const myRef = useRef();
-
-    let data = this.state.isPlaying;
-
-    // if (data) {
-    //   this.audioSong.pause();
-    // } else {
-    //   this.audioSong.play();
-    // }
-
-    this.setState({ isPlaying: !data });
+    setIsPlaying(!data);
 
     if (!data) {
-      this.audioSong.play();
-      this.props.setTabla(true)
-      console.log("if clicked play")
-      
+      audioSong.current.play();
+      props.setTabla(true);
+      console.log("if clicked play");
+    } else {
+      audioSong.current.pause();
+      props.setTabla(false);
+      console.log("else if clicked pause");
     }
-    else if(data){
-      this.audioSong.pause();
-      this.props.setTabla(false)
-      console.log("else if clicked pause")
-    }
-    
-    // this.props.setTabla(true)
   };
 
-  render() {
-
-   
-    return (
-      <>
+  return (
+    <>
+      <div>
         <div>
-          <div>
-            <button onClick={this.playPause}>
-              {this.props.tabla ? (
-                // <div className="iconify" data-icon="material-symbols:pause" />
-                <div>pause</div>
-              ) : (
-                // <div className="iconify" data-icon="icon-park:play" />
-                <div>play</div>
-              )}
-            </button>
-          </div>
+          <button
+          style={{ color:props.theme.text}}
+          onClick={playPause}>
+            {props.tabla ? <div>pause</div> : <div>play</div>}
+          </button>
         </div>
-      </>
-    );
-  }
-}
+      </div>
+    </>
+  );
+};
 
 export default Aplayer;
