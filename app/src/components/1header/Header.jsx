@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
@@ -16,11 +17,12 @@ import tabla1 from "../../assets/pngs/tabla2.png";
 import { useMyContext } from "../../App.jsx";
 
 function Header(props) {
+  const [currentUser, setCurrentUser] = useState(false);
+
   const { setThemeMode, setTablaMode, tablaMode, themeMode } = useMyContext();
 
   const theme = props.theme;
 
-  console.log("headers -" + props.tabla);
   const styles = style({
     cursor: "pointer",
     height: "45px",
@@ -97,7 +99,6 @@ function Header(props) {
             className="homei"
             to="/home"
             tag={Link}
-            activeStyle={{ fontWeight: "bold" }}
             style={{ borderRadius: 5, color: theme.text }}
           >
             Home
@@ -108,7 +109,6 @@ function Header(props) {
             className="ec"
             to="/updates"
             tag={Link}
-            activeStyle={{ fontWeight: "bold" }}
             style={{ borderRadius: 5, color: theme.text }}
           >
             News and Admissions
@@ -119,7 +119,6 @@ function Header(props) {
             className="xp"
             to="/gallery"
             tag={Link}
-            activeStyle={{ fontWeight: "bold" }}
             style={{ borderRadius: 5, color: theme.text }}
           >
             Gallery
@@ -130,7 +129,6 @@ function Header(props) {
             className="projects"
             to="/faculty"
             tag={Link}
-            activeStyle={{ fontWeight: "bold" }}
             style={{ borderRadius: 5, color: theme.text }}
           >
             Faculty
@@ -141,22 +139,18 @@ function Header(props) {
             className="cr"
             to="/aboutUs"
             tag={Link}
-            activeStyle={{ fontWeight: "bold" }}
             style={{ borderRadius: 5, color: theme.text }}
           >
             Aboutus and Contacts
           </NavLink>
         </li>
 
-        <div className="flex ">
+        <div className="grid grid-flow-col place-items-center gap-1 ">
           <button className=" flex " {...styles} onClick={changeTheme}>
             {icon}
           </button>
 
-          <button
-            className=" flex "
-            {...styles}
-          >
+          <button className=" flex " {...styles}>
             {
               <Aplayer
                 setTabla={setTablaMode}
@@ -165,7 +159,20 @@ function Header(props) {
               />
             }
           </button>
-          {/* <button {...styles}>{<Aplayer2 />}</button> */}
+
+          <Link to="/profile" >
+            {currentUser ? (
+              <img
+                src={currentUser.profilePicture}
+                alt="profile"
+                className="h-7 w-7 rounded-full object-cover"
+              />
+            ) : (
+              <li 
+              >Sign In</li>
+            )}
+          </Link>
+
         </div>
       </ul>
     </header>

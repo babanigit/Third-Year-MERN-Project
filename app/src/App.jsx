@@ -15,10 +15,10 @@ function App() {
   return (
     <>
       <ThemeProvider theme={themes[themeMode]}>
-        <MyContext.Provider value={{setThemeMode,setTablaMode,tablaMode,themeMode}}>
-          <Main
-            theme={themes[themeMode]}
-          />
+        <MyContext.Provider
+          value={{ setThemeMode, setTablaMode, tablaMode, themeMode }}
+        >
+          <Main theme={themes[themeMode]} />
         </MyContext.Provider>
       </ThemeProvider>
     </>
@@ -27,8 +27,8 @@ function App() {
 
 // creating useMyContext fun
 function useMyContext() {
-  return useContext(MyContext)
+  return useContext(MyContext);
 }
 
 export default App;
-export {useMyContext}
+export { useMyContext };
