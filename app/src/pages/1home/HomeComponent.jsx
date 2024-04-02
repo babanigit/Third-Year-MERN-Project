@@ -7,20 +7,10 @@ import Page2 from "../../container/home/Page2";
 
 function Home(props) {
   return (
-    <div className=" ">
-      {/* header */}
-      <Header
-        theme={props.theme}
-        setTheme={props.setTheme}
-        setTabla={props.setTabla}
-        tabla={props.tabla}
-      />
-
-      {/* pages */}
+    <div>
+      <Header theme={props.theme} />
       <Page1 theme={props.theme} />
-      <Page2 />
-
-      {/* footer */}
+      <Page2 theme={props.theme} />
       <Footer theme={props.theme} />
     </div>
   );

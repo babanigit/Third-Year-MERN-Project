@@ -27,7 +27,6 @@ function Header(props) {
     width: "45px",
     marginRight: "5px",
     marginLeft: "15px",
-    paddingTop: "5px",
     borderRadius: "50%",
     border: "none",
     alignItems: "center",
@@ -76,9 +75,8 @@ function Header(props) {
 
   return (
     // <Fade top duration={1000} distance="20px">
-    <header className="header w-screen   ">
+    <header className="header w-full bg-blue-300 bg-opacity-50 px-8 h-auto ">
       <NavLink to={link} tag={Link} className="logo">
-        <span></span>
         <div className=" grid grid-flow-col place-items-center">
           <span className="logo-name">{greeting.logo_name}</span>
           <div className=" w-9">
@@ -87,9 +85,9 @@ function Header(props) {
         </div>
       </NavLink>
 
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <input className="menu-btn " type="checkbox" id="menu-btn" />
 
-      <label className="menu-icon py-14" htmlFor="menu-btn">
+      <label className="menu-icon " htmlFor="menu-btn">
         <span className="navicon"></span>
       </label>
 
