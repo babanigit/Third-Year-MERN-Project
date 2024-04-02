@@ -16,6 +16,8 @@ const SignIn = (props) => {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
 
+  const [errorData, setErrorData]= useState("");
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -36,6 +38,8 @@ const SignIn = (props) => {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
+      setErrorData(data);
+      console.log("data is ",data)
 
       if (data.success === false) {
         dispatch(signInFailure(data));
@@ -43,7 +47,7 @@ const SignIn = (props) => {
       }
       // sharing data to current user in redux
       dispatch(signInSuccess(data));
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       dispatch(signInFailure(error));
     }
@@ -97,7 +101,7 @@ const SignIn = (props) => {
           </Link>
         </div>
         <p className="text-red-500 mt-5">
-          {error ? error.message || "Something went wrong!" : ""}
+          {error ? errorData.error|| "Something went wrong!" : ""}
         </p>
       </div>
     </>

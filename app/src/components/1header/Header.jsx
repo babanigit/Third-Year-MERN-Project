@@ -18,9 +18,10 @@ import { useMyContext } from "../../App.jsx";
 
 import { useSelector } from "react-redux";
 
-
 function Header(props) {
   const { currentUser } = useSelector((state) => state.user);
+
+  // console.log("user PP", currentUser.profilePicture)
 
   const { setThemeMode, setTablaMode, tablaMode, themeMode } = useMyContext();
 
@@ -163,19 +164,19 @@ function Header(props) {
             }
           </button>
 
-          <Link to="/profile" >
+          <Link
+          {...styles}
+          to="/profile">
             {currentUser ? (
               <img
                 src={currentUser.profilePicture}
                 alt="profile"
-                className="h-7 w-7 rounded-full object-cover"
+                className="w-full rounded-full object-cover"
               />
             ) : (
-              <li 
-              >Sign In</li>
+              <li>Sign In</li>
             )}
           </Link>
-
         </div>
       </ul>
     </header>

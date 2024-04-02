@@ -110,7 +110,13 @@ app.use((error, req, res, next) => {
     errorMessage = error.message;
   }
     console.error("[console log error] ",error);
-  res.status(statusCode).json({ error: errorMessage });
+  res
+  .status(statusCode)
+  .json({
+    success: false,
+    error: errorMessage,
+    statusCode,
+    })
 });
 
 // app listen
