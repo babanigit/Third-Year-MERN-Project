@@ -8,8 +8,11 @@ import cookieParser from "cookie-parser"
 import session from "express-session";
 import createHttpError, { isHttpError } from "http-errors";
 
+import authRoute from "./routes/AuthRoute.js"
+
 
 import dotenv from 'dotenv';
+import { verifyToken } from './utils/VerifyUser.js';
 dotenv.config();
 
 const app = express();
@@ -21,6 +24,26 @@ app.use(cors());
 const port = process.env.PORT;
 const DB= process.env.DATABASE;
 const __dirname = path.resolve();
+
+
+// database connection
+const connectDb = async () => {
+  if (!DB) {
+    throw new Error("Database connection string is not provided. -b");
+  }
+  try {
+    const connect = await mongoose.connect(DB);
+    console.log(
+      "database connected: ",
+      connect.connection.host,
+      connect.connection.name
+    );
+  } catch (error) {
+    console.error("failed to connect to the database");
+    console.error(error)
+  }
+};
+connectDb();
 
 
 // session
@@ -47,6 +70,7 @@ app.use(session({
 
 
 // routes
+app.use("/api/auth",authRoute)
 
 
 
@@ -58,24 +82,7 @@ app.use(session({
 // });
 
 
-// database connection
-const connectDb = async () => {
-  if (!DB) {
-    throw new Error("Database connection string is not provided. -b");
-  }
-  try {
-    const connect = await mongoose.connect(DB);
-    console.log(
-      "database connected: ",
-      connect.connection.host,
-      connect.connection.name
-    );
-  } catch (error) {
-    console.error("failed to connect to the database");
-    console.error(error)
-  }
-};
-connectDb();
+
 
 app.get("/", (req, res, next) => {
   try {
@@ -95,14 +102,14 @@ app.use((res, req, next) => {
 
 // error handler middleware
 app.use((error, req, res, next) => {
-  console.error(error);
-  let errorMessage = "an unknown error occurred";
+  let errorMessage = "an unknown error occurred(default error)";
   let statusCode = 500;
-  if (error instanceof Error) errorMessage = error.message;
+  // if (error instanceof Error) errorMessage = error.message;
   if (isHttpError(error)) {
     statusCode = error.status;
     errorMessage = error.message;
   }
+    console.error("[console log error] ",error);
   res.status(statusCode).json({ error: errorMessage });
 });
 
