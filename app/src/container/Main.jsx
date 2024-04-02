@@ -13,8 +13,10 @@ import AboutUs from "../pages/5aboutUs,ContactUsAndServices/AboutUs";
 import NotFound from "../components/other/NotFound";
 
 import ScrollToTop from "../components/other/ScrollToTop";
-import SignIn from "../components/3RegisterLogin/SignIn";
 import SignUp from "../components/3RegisterLogin/SignUp";
+import PrivateRoute from "../components/other/PrivateRoute";
+import ProfilePage from "../pages/6profile/ProfilePage";
+import SignInPage from "../pages/7signinSignup/SignInPage";
 // import UseScrollToTop from "../components/UseScrollToTop";
 
 const Main = (props) => {
@@ -31,7 +33,7 @@ const Main = (props) => {
 
           <Routes>
             <Route path="/" element={<Splash theme={props.theme} />} />
-            <Route path="/signin" element={<SignIn theme={props.theme} />} />
+            <Route path="/signin" element={<SignInPage theme={props.theme} />} />
             <Route path="/signup" element={<SignUp theme={props.theme} />} />
             <Route path="/home" element={<Home theme={props.theme} />} />
             <Route path="/updates" element={<Updates theme={props.theme} />} />
@@ -40,6 +42,10 @@ const Main = (props) => {
             <Route path="/aboutUs" element={<AboutUs theme={props.theme} />} />
             <Route path="/splash" element={<Splash theme={props.theme} />} />
             <Route path="/*" element={<NotFound theme={props.theme} />} />
+
+            <Route element={<PrivateRoute/>} >
+              <Route path="/profile" element={<ProfilePage />} />
+            </Route>
           </Routes>
         </BrowserRouter>
 

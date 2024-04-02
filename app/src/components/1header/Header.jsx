@@ -16,8 +16,11 @@ import Aplayer from "./Aplayer.jsx";
 import tabla1 from "../../assets/pngs/tabla2.png";
 import { useMyContext } from "../../App.jsx";
 
+import { useSelector } from "react-redux";
+
+
 function Header(props) {
-  const [currentUser, setCurrentUser] = useState(false);
+  const { currentUser } = useSelector((state) => state.user);
 
   const { setThemeMode, setTablaMode, tablaMode, themeMode } = useMyContext();
 
