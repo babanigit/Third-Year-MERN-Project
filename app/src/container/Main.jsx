@@ -13,10 +13,10 @@ import AboutUs from "../pages/5aboutUs,ContactUsAndServices/AboutUs";
 import NotFound from "../components/other/NotFound";
 
 import ScrollToTop from "../components/other/ScrollToTop";
-import SignUp from "../components/3RegisterLogin/SignUp";
 import PrivateRoute from "../components/other/PrivateRoute";
 import ProfilePage from "../pages/6profile/ProfilePage";
 import SignInPage from "../pages/7signinSignup/SignInPage";
+import SignUpPage from "../pages/7signinSignup/SignUpPage";
 // import UseScrollToTop from "../components/UseScrollToTop";
 
 const Main = (props) => {
@@ -34,7 +34,7 @@ const Main = (props) => {
           <Routes>
             <Route path="/" element={<Splash theme={props.theme} />} />
             <Route path="/signin" element={<SignInPage theme={props.theme} />} />
-            <Route path="/signup" element={<SignUp theme={props.theme} />} />
+            <Route path="/signup" element={<SignUpPage theme={props.theme} />} />
             <Route path="/home" element={<Home theme={props.theme} />} />
             <Route path="/updates" element={<Updates theme={props.theme} />} />
             <Route path="/gallery" element={<Gallery theme={props.theme} />} />
