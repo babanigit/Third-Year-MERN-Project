@@ -9,6 +9,7 @@ import session from "express-session";
 import createHttpError, { isHttpError } from "http-errors";
 
 import authRoute from "./routes/AuthRoute.js"
+import userRoute from "./routes/UserRoute.js"
 
 
 import dotenv from 'dotenv';
@@ -71,6 +72,7 @@ app.use(session({
 
 // routes
 app.use("/api/auth",authRoute)
+app.use("/api/user",userRoute)
 
 
 
@@ -102,7 +104,7 @@ app.use((res, req, next) => {
 
 // error handler middleware
 app.use((error, req, res, next) => {
-  let errorMessage = "an unknown error occurred(default error)";
+  let errorMessage = "an unknown error occurred(default non-httpError error)";
   let statusCode = 500;
   // if (error instanceof Error) errorMessage = error.message;
   if (isHttpError(error)) {

@@ -63,7 +63,14 @@ export const google = async (req, res, next) => {
 
         const user = await User.findOne({ email: req.body.email });
         if (user) {
-          const token = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET);
+
+          const SK = process.env.ACCESS_TOKEN_SECRET
+          console.log("hello")
+          if(!SK) {
+            throw createHttpError(404, " undefined Access token secret ")
+          }
+
+          const token = jwt.sign({ id: user._id }, SK);
     
           const { password: hashedPassword, ...rest } = user._doc;
     
