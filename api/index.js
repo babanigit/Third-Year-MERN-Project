@@ -74,12 +74,12 @@ app.use("/api/auth",authRoute)
 
 
 
-// // use the frontend app
-// app.use(express.static(path.join(__dirname, "/app/dist")));
-// console.log(__dirname)
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '/app/dist/index.html'));
-// });
+// use the frontend app
+app.use(express.static(path.join(__dirname, "/app/dist")));
+console.log(__dirname)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/app/dist/index.html'));
+});
 
 
 
