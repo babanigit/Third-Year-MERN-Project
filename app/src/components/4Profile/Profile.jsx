@@ -146,7 +146,7 @@ const Profile = (props) => {
     <>
       <div
         style={{ background: props.theme.body, color: props.theme.text }}
-        className="p-3 max-w-lg mx-auto"
+        className="p-3 h-screen max-w-lg mx-auto"
       >
         <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
