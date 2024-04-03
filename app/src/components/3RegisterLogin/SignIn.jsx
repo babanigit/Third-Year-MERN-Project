@@ -103,7 +103,7 @@ const SignIn = (props) => {
         </div>
         <p className="text-red-500 mt-5">
           {error
-            ? errorData.error || "Something went wrong(from singIn.jsx)!"
+            ? errorData.error || ":("
             : ""}
         </p>
       </div>

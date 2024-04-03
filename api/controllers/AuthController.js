@@ -41,7 +41,7 @@ export const signIn = async (req, res, next) => {
 
 
         // generating token
-        const token = jwt.sign({ id: validUser._id }, process.env.ACCESS_TOKEN_SECRET);
+        const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET);
 
         const { password: hashedPassword, ...rest } = validUser._doc;
     
@@ -64,13 +64,7 @@ export const google = async (req, res, next) => {
         const user = await User.findOne({ email: req.body.email });
         if (user) {
 
-          const SK = process.env.ACCESS_TOKEN_SECRET
-          console.log("hello")
-          if(!SK) {
-            throw createHttpError(404, " undefined Access token secret ")
-          }
-
-          const token = jwt.sign({ id: user._id }, SK);
+          const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     
           const { password: hashedPassword, ...rest } = user._doc;
     
@@ -122,6 +116,7 @@ export const google = async (req, res, next) => {
 
         
     } catch (error) {
+      console.log("error from authCont ", error)
       next(error)
     }
 

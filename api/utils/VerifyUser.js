@@ -6,11 +6,11 @@ export const verifyToken = (req, res, next) => {
 
   if (!token) throw errorHandler(401, "you are not authenticated! ");
 
-  if (!process.env.ACCESS_TOKEN_SECRET) {
+  if (!process.env.JWT_SECRET) {
     throw errorHandler(404, " Access token secret not found or undefined (VU)");
   }
   // verify token
-  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) throw errorHandler(403, "token is not valid! ");
 
     req.user = user;
