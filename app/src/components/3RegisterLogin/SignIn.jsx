@@ -11,12 +11,13 @@ import {
   signInSuccess,
   signInFailure,
 } from "../../redux/user/UserSlice";
+import OAuth from "../5GoogleAuth/OAuth";
 
 const SignIn = (props) => {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
 
-  const [errorData, setErrorData]= useState("");
+  const [errorData, setErrorData] = useState("");
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ const SignIn = (props) => {
       });
       const data = await res.json();
       setErrorData(data);
-      console.log("data is ",data)
+      console.log("data is ", data);
 
       if (data.success === false) {
         dispatch(signInFailure(data));
@@ -92,7 +93,7 @@ const SignIn = (props) => {
           >
             {loading ? "Loading..." : "Sign In"}
           </button>
-          {/* <OAuth /> */}
+          <OAuth />
         </form>
         <div className="flex gap-2 mt-5">
           <p>Dont Have an account?</p>
@@ -101,7 +102,9 @@ const SignIn = (props) => {
           </Link>
         </div>
         <p className="text-red-500 mt-5">
-          {error ? errorData.error|| "Something went wrong(from singIn.jsx)!" : ""}
+          {error
+            ? errorData.error || "Something went wrong(from singIn.jsx)!"
+            : ""}
         </p>
       </div>
     </>

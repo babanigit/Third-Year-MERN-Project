@@ -44,7 +44,7 @@ const Main = (props) => {
             <Route path="/*" element={<NotFound theme={props.theme} />} />
 
             <Route element={<PrivateRoute/>} >
-              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/profile" element={<ProfilePage theme={props.theme} />} />
             </Route>
           </Routes>
         </BrowserRouter>
