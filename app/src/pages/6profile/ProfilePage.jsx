@@ -8,12 +8,16 @@ import Profile from "../../components/4Profile/Profile"
 const ProfilePage = (props) => {
   return (
     <>
+    <div className=" h-screen">
+
+    
     <Header theme={props.theme}  />
 
     <Profile theme={props.theme}  />
 
     <Footer theme={props.theme}  />
     
+    </div>
     </>
   )
 }
