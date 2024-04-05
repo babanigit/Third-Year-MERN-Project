@@ -1,20 +1,22 @@
 /* eslint-disable react/prop-types */
-import Header from "../../components/1header/Header"
-import Footer from "../../components/2footer/Footer"
-import SignIn from "../../components/3RegisterLogin/SignIn"
-
-
+import Header from "../../components/1header/Header";
+// import Footer from "../../components/2footer/Footer";
+import SignIn from "../../components/3RegisterLogin/SignIn";
 
 const SignInPage = (props) => {
   return (
-    <>
-    <Header theme={props.theme} />
+    <div className=" h-screen ">
+      <div>
 
-    <SignIn theme={props.theme}  />
-    <Footer theme={props.theme}  />
+      <Header theme={props.theme} />
+      </div>
 
-    </>
-  )
-}
+      <div className=" ">
+        <SignIn theme={props.theme} />
+      </div>
+    
+    </div>
+  );
+};
 
-export default SignInPage
+export default SignInPage;

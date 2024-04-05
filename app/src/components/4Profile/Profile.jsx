@@ -137,8 +137,8 @@ const Profile = (props) => {
   return (
     <>
       <div
-        style={{ background: props.theme.body, color: props.theme.text }}
-        className=" w-screen h-auto bg-purple-300 "
+       style={{ background: props.theme.body, color: props.theme.text }}
+       className="p-3 max-w-lg m-auto h-screen grid place-content-center "
       >
         <div className="p-3  max-w-lg mx-auto  w-screen">
           <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>

@@ -13,7 +13,7 @@ import { style } from "glamor";
 import Aplayer from "./Aplayer.jsx";
 
 // images
-import tabla1 from "../../assets/pngs/tabla2.png";
+import tabla1 from "../../assets/pngs/tabla-64.png";
 import { useMyContext } from "../../App.jsx";
 
 import { useSelector } from "react-redux";
@@ -52,7 +52,7 @@ function Header(props) {
 
   // function for theme changing
   function changeTheme() {
-    setTablaMode(true);
+
     if (currTheme === "light") {
       setThemeMode("dark");
       // localStorage.setItem("theme", "dark");
@@ -62,6 +62,7 @@ function Header(props) {
       // localStorage.setItem("theme", "light");
       setCurrTheme("light");
     }
+    
   }
 
   const icon =
@@ -81,7 +82,7 @@ function Header(props) {
 
   return (
     // <Fade top duration={1000} distance="20px">
-    <header className="header w-full bg-blue-300 bg-opacity-50 px-8 h-auto ">
+    <header className="header w-full  px-8 h-auto fixed ">
       <NavLink to={link} tag={Link} className="logo">
         <div className=" grid grid-flow-col place-items-center">
           <span className="logo-name">{greeting.logo_name}</span>
@@ -93,11 +94,11 @@ function Header(props) {
 
       <input className="menu-btn " type="checkbox" id="menu-btn" />
 
-      <label className="menu-icon " htmlFor="menu-btn">
-        <span className="navicon"></span>
+      <label className="menu-icon" htmlFor="menu-btn">
+        <span className="navicon "></span>
       </label>
 
-      <ul className="menu">
+      <ul className="menu ">
         <li>
           <NavLink
             className="homei"

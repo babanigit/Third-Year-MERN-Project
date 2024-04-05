@@ -54,7 +54,7 @@ const SignUp = (props) => {
     <>
       <div
         style={{ background: props.theme.body, color: props.theme.text }}
-        className="p-3 h-screen max-w-lg mx-auto"
+        className="p-3 max-w-lg m-auto h-screen grid place-content-center "
       >
         <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">

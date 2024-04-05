@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import Header from "../../components/1header/Header";
-import Footer from "../../components/2footer/Footer";
+// import Footer from "../../components/2footer/Footer";
 
 const Gallery = (props) => {
   return (
@@ -10,7 +10,7 @@ const Gallery = (props) => {
         <div>gallery</div>
       </div>
 
-      <Footer theme={props.theme} />
+      {/* <Footer theme={props.theme} /> */}
     </>
   );
 };
