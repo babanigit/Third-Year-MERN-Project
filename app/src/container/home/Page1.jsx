@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 
 import tabla64 from "../../assets/pngs/tabla2.png";
+import { PortfolioData } from "../../portfolio";
 
 const Page1 = () => {
   return (
@@ -10,9 +11,11 @@ const Page1 = () => {
         <div className="  grid place-content-center">
           <img className=" w-[120px]" src={tabla64} />
         </div>
+        <div className="  rounded-3xl grid place-content-center col-span-2  p-44 ">
+          <div className="px-13  text-2xl">
+          {PortfolioData.para}
 
-        <div className="  rounded-3xl grid place-content-center col-span-2 ">
-          hello2
+          </div>
         </div>
       </div>
     </>

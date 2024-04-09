@@ -12,11 +12,11 @@ const greeting = {
   title: "Hello.",
   title2: "TY-BCA",
   logo_name: "BMI",
-  // nickname: "",
-  // full_name: "",
-  // subTitle: "
-  // mail: "",
 };
+
+export const PortfolioData = {
+  para: "A tabla is a pair of hand drums from the Indian subcontinent. Since the 18th century, it has been the principal percussion instrument in Hindustani classical music"
+}
 
 const socialMediaLinks = {
   /* Your Social Media Link */
