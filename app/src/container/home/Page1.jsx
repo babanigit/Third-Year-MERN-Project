@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-import tabla64 from "../../assets/pngs/tabla2.png";
-import { PortfolioData } from "../../portfolio";
+import tabla64 from "../../assets/pngs/tabla-64.png";
+import { PortfolioData } from "../../assets/portfolio";
 
 const Page1 = () => {
   return (

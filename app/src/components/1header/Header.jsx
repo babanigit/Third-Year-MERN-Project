@@ -5,7 +5,7 @@ import { useState } from "react";
 import "./Header.css";
 // import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
-import { greeting, settings } from "../../portfolio.js";
+import { greeting, settings } from "../../assets/portfolio.js";
 import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import { style } from "glamor";
@@ -13,7 +13,7 @@ import { style } from "glamor";
 import Aplayer from "./Aplayer.jsx";
 
 // images
-import tabla1 from "../../assets/pngs/tabla-64.png";
+import tabla1 from "../../assets/pngs/tabla2.png";
 import { useMyContext } from "../../App.jsx";
 
 import { useSelector } from "react-redux";
@@ -82,7 +82,10 @@ function Header(props) {
 
   return (
     // <Fade top duration={1000} distance="20px">
-    <header className="header w-full  px-8 h-auto fixed ">
+    <header className="header w-full  px-8 h-auto fixed  "
+    style={{ background: props.theme.body, color: props.theme.text }}
+
+    >
       <NavLink to={link} tag={Link} className="logo">
         <div className=" grid grid-flow-col place-items-center">
           <span className="logo-name">{greeting.logo_name}</span>
