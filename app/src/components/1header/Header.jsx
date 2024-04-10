@@ -82,7 +82,7 @@ function Header(props) {
 
   return (
     // <Fade top duration={1000} distance="20px">
-    <header className="header w-full  px-8 h-auto fixed  "
+    <header className="header w-full  px-8 h-auto  "
     style={{ background: props.theme.body, color: props.theme.text }}
 
     >
@@ -132,16 +132,7 @@ function Header(props) {
             Gallery
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            className="projects"
-            to="/faculty"
-            tag={Link}
-            style={{ borderRadius: 5, color: theme.text }}
-          >
-            Faculty
-          </NavLink>
-        </li>
+       
         <li>
           <NavLink
             className="cr"
@@ -150,6 +141,17 @@ function Header(props) {
             style={{ borderRadius: 5, color: theme.text }}
           >
             Aboutus and Contacts
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            className="projects"
+            to="/shop"
+            tag={Link}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            shop
           </NavLink>
         </li>
 

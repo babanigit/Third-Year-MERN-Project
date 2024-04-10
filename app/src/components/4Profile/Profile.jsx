@@ -137,10 +137,10 @@ const Profile = (props) => {
   return (
     <>
       <div
-       style={{ background: props.theme.body, color: props.theme.text }}
-       className="p-3 max-w-lg m-auto h-screen grid place-content-center "
+        style={{ background: props.theme.body, color: props.theme.text }}
+        className=" max-w-lg m-auto grid place-content-center "
       >
-        <div className="p-3  max-w-lg mx-auto  w-screen">
+        <div className="  max-w-lg mx-auto   w-screen">
           <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
           <form onSubmit={handleSubmit} className="flex h-auto flex-col gap-4">
             <input

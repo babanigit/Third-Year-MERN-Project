@@ -5,7 +5,7 @@ import SignIn from "../../components/3RegisterLogin/SignIn";
 
 const SignInPage = (props) => {
   return (
-    <div className=" h-screen ">
+    <div className=" ">
       <div>
 
       <Header theme={props.theme} />
