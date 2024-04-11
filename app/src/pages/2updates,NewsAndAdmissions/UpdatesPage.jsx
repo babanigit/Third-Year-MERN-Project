@@ -1,18 +1,16 @@
 /* eslint-disable react/prop-types */
 import Header from "../../components/1header/Header";
+import Page1 from "../../container/admission/Page1";
 // import Footer from "../../components/2footer/Footer";
 
-const Updates = (props) => {
+const UpdatesPage = (props) => {
   return (
     <>
       <div className=" w-screen">
-        <Header
-          theme={props.theme}
-          setTheme={props.setTheme}
-          setTabla={props.setTabla}
-          tabla={props.tabla}
-        />
-        <div>updates</div>
+        <Header theme={props.theme} />
+      </div>
+      <div>
+        <Page1 theme={props.theme} />
       </div>
 
       {/* <Footer theme={props.theme} /> */}
@@ -20,4 +18,4 @@ const Updates = (props) => {
   );
 };
 
-export default Updates;
+export default UpdatesPage;

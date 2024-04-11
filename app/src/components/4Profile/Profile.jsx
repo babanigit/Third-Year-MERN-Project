@@ -134,6 +134,9 @@ const Profile = (props) => {
     }
   };
 
+
+  console.log("current porfile ", currentUser.profilePicture)
+
   return (
     <>
       <div

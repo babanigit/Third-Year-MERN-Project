@@ -6,7 +6,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Splash from "../pages/0splash/Splash";
 import Home from "../pages/1home/HomeComponent";
-import Updates from "../pages/2updates,NewsAndAdmissions/Updates";
+import UpdatesPage from "../pages/2updates,NewsAndAdmissions/UpdatesPage";
 import Gallery from "../pages/3galleryMediaCentre/Gallery";
 import AboutUs from "../pages/4aboutUs,ContactUsAndServices/AboutUs";
 import NotFound from "../components/other/NotFound";
@@ -36,7 +36,7 @@ const Main = (props) => {
             <Route path="/signin" element={<SignInPage theme={props.theme} />} />
             <Route path="/signup" element={<SignUpPage theme={props.theme} />} />
             <Route path="/home" element={<Home theme={props.theme} />} />
-            <Route path="/updates" element={<Updates theme={props.theme} />} />
+            <Route path="/updates" element={<UpdatesPage theme={props.theme} />} />
             <Route path="/gallery" element={<Gallery theme={props.theme} />} />
             <Route path="/shop" element={<ShopePage theme={props.theme} />} />
             <Route path="/aboutUs" element={<AboutUs theme={props.theme} />} />

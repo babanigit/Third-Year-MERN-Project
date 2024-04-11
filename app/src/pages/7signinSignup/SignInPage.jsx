@@ -6,15 +6,13 @@ import SignIn from "../../components/3RegisterLogin/SignIn";
 const SignInPage = (props) => {
   return (
     <div className=" ">
-      <div>
-
-      <Header theme={props.theme} />
+      <div className=" fixed w-screen">
+        <Header theme={props.theme} />
       </div>
 
       <div className=" ">
         <SignIn theme={props.theme} />
       </div>
-    
     </div>
   );
 };

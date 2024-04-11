@@ -1,7 +1,7 @@
 import { Carousel } from "antd";
 
 import banner1 from "../../assets/tablaBanner/banner1.png";
-import banner2 from "../../assets/tablaBanner/banner2.png";
+// import banner2 from "../../assets/tablaBanner/banner2.png";
 import banner3 from "../../assets/tablaBanner/banner3.png";
 
 // const contentStyle = {
@@ -16,17 +16,17 @@ const Page1 = () => {
   const renderSlider = () => {
     return (
       <>
-      <div className=" h-auto w-auto bg-yellow-300 p-8 px-96 " >
-           <Carousel autoplay >
-          <div>
-            <img
-              src={banner1}
-            //   style={contentStyle}
-              className=" w-[700px] p-13 "
-            />
-          </div>
+        <div className=" h-auto w-auto bg-yellow-300 p-8 px-96 ">
+          <Carousel autoplay>
+            <div>
+              <img
+                src={banner1}
+                //   style={contentStyle}
+                className=" w-[700px] p-13 "
+              />
+            </div>
 
-          {/* <div>
+            {/* <div>
             <img
               src={banner2}
             //   style={contentStyle}
@@ -34,16 +34,15 @@ const Page1 = () => {
             />
           </div> */}
 
-          <div>
-            <img
-              src={banner3}
-            //   style={contentStyle}
-              className=" w-[700px] grid place-items-center "
-            />
-          </div>
-        </Carousel>
-      </div>
-     
+            <div>
+              <img
+                src={banner3}
+                //   style={contentStyle}
+                className=" w-[700px] grid place-items-center "
+              />
+            </div>
+          </Carousel>
+        </div>
       </>
     );
   };
