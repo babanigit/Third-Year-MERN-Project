@@ -15,7 +15,11 @@ const greeting = {
 };
 
 export const PortfolioData = {
-  para: "A tabla is a pair of hand drums from the Indian subcontinent. Since the 18th century, it has been the principal percussion instrument in Hindustani classical music"
+  para: "Shree Bhawani Musical Instrument and Classes is a distinguished institution dedicated to the preservation and dissemination of Indian classical music traditions. We specialize in providing comprehensive training in instruments like Pakhawaj, Tabla, and others, imparting both theoretical knowledge and practical skills to our students.",
+
+  para2: "At Shree Bhawani, we take pride in offering expert guidance from seasoned musicians and educators who are passionate about nurturing talent and instilling a deep appreciation for the rich heritage of Indian classical music. Our curriculum is meticulously designed to cater to students of all skill levels, from beginners to advanced learners.",
+
+  para3: "In addition to our educational endeavors, we also boast a state-of-the-art manufacturing facility where we handcraft high-quality Pakhawaj and Tabla instruments. Each instrument is crafted with precision and care, using traditional techniques passed down through generations, ensuring exceptional sound quality and durability."
 }
 
 const socialMediaLinks = {
