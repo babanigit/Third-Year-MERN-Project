@@ -1,10 +1,20 @@
-import "./SocialMedia.css";
+/* eslint-disable no-unused-vars */
+// import "./SocialMedia.css";
 import { socialMediaLinks } from "../assets/portfolio.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faYoutube, faFacebook } from "@fortawesome/free-brands-svg-icons";
+
+import { SocialIcon } from 'react-social-icons/component'
+
 
 export default function SocialMedia() {
   return (
-    <div className="social-media-div">
-      <a
+    <div className="social-media-div grid grid-flow-col gap-5">
+  
+      {/* <FontAwesomeIcon icon={faYoutube} size="2x" /> */}
+
+      {/* <a
         href={socialMediaLinks.github}
         className="icon-button github"
         target="_blank"
@@ -12,8 +22,8 @@ export default function SocialMedia() {
       >
         <i className="fab fa-github"></i>
         <span></span>
-      </a>
-      <a
+      </a> */}
+      {/* <a
         href={socialMediaLinks.linkedin}
         className="icon-button linkedin"
         target="_blank"
@@ -21,26 +31,19 @@ export default function SocialMedia() {
       >
         <i className="fab fa-linkedin-in"></i>
         <span></span>
-      </a>
+      </a> */}
       <a
-        href={`mailto:${socialMediaLinks.gmail}`}
+        href={socialMediaLinks.youtube}
         className="icon-button google"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-google"></i>
+        {/* <i className="fab fa-google"></i> */}
+        <FontAwesomeIcon icon={faYoutube} size="2x" />
+
         <span></span>
       </a>
       {/* <a
-        href={socialMediaLinks.twitter}
-        className="icon-button twitter"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-twitter"></i>
-        <span></span>
-      </a> */}
-      <a
         href={socialMediaLinks.instagram}
         className="icon-button instagram"
         target="_blank"
@@ -49,7 +52,7 @@ export default function SocialMedia() {
         <i className="fab fa-instagram"></i>
 
         <span></span>
-      </a>
+      </a> */}
 
       <a
         href={socialMediaLinks.facebook}
@@ -57,7 +60,8 @@ export default function SocialMedia() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-facebook"></i>
+        {/* <i className="fab fa-facebook"></i> */}
+        <FontAwesomeIcon icon={faFacebook} size="2x" />
 
         <span></span>
       </a>

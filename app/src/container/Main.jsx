@@ -17,6 +17,8 @@ import ProfilePage from "../pages/6profile/ProfilePage";
 import SignInPage from "../pages/7signinSignup/SignInPage";
 import SignUpPage from "../pages/7signinSignup/SignUpPage";
 import ShopePage from "../pages/5shop/ShopePage";
+// import Footer from "../components/2footer/Footer";
+// import Header from "../components/1header/Header";
 // import UseScrollToTop from "../components/UseScrollToTop";
 
 const Main = (props) => {
@@ -27,9 +29,12 @@ const Main = (props) => {
       <div
         style={{ background: props.theme.body, color: props.theme.text }}
       >
+
         <BrowserRouter basename="/">
           <ScrollToTop />
           {/* <AppHeader /> */}
+
+          {/* <Header theme={props.theme} /> */}
 
           <Routes>
             <Route path="/" element={<Splash theme={props.theme} />} />
@@ -47,9 +52,13 @@ const Main = (props) => {
               <Route path="/profile" element={<ProfilePage theme={props.theme} />} />
             </Route>
           </Routes>
+          
+          {/* <Footer theme={props.theme} /> */}
         </BrowserRouter>
 
+
         {/* <UseScrollToTop /> */}
+
       </div>
       {/* </AnimationPresence> */}
     </>

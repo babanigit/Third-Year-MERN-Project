@@ -13,7 +13,7 @@ import { style } from "glamor";
 import Aplayer from "./Aplayer.jsx";
 
 // images
-import tabla1 from "../../assets/pngs/tabla-64.png";
+import tabla1 from "../../assets/pngs/bmi.jpg";
 import { useMyContext } from "../../App.jsx";
 
 import { useSelector } from "react-redux";

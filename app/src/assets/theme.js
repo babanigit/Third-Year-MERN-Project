@@ -2,7 +2,7 @@
 
 const lightTheme = {
     name: "light",
-    body: "#CCCCFF",
+    body: "#E6E6E6",
     body2: "#BDBDBD",
     text: "#202020",
     bg1: 1,

@@ -58,7 +58,7 @@ const SignIn = (props) => {
     <>
       <div
         style={{ background: props.theme.body, color: props.theme.text }}
-        className=" max-w-lg m-auto h-screen grid place-content-center "
+        className=" max-w-lg m-auto h-fit grid place-content-center "
       >
          <div className="  max-w-lg mx-auto   w-screen">
         <h1 className="text-3xl text-center font-semibold ">Sign In</h1>

@@ -19,16 +19,19 @@ export const PortfolioData = {
 
   para2: "At Shree Bhawani, we take pride in offering expert guidance from seasoned musicians and educators who are passionate about nurturing talent and instilling a deep appreciation for the rich heritage of Indian classical music. Our curriculum is meticulously designed to cater to students of all skill levels, from beginners to advanced learners.",
 
-  para3: "In addition to our educational endeavors, we also boast a state-of-the-art manufacturing facility where we handcraft high-quality Pakhawaj and Tabla instruments. Each instrument is crafted with precision and care, using traditional techniques passed down through generations, ensuring exceptional sound quality and durability."
+  para3: "In addition to our educational endeavors, we also boast a state-of-the-art manufacturing facility where we handcraft high-quality Pakhawaj and Tabla instruments. Each instrument is crafted with precision and care, using traditional techniques passed down through generations, ensuring exceptional sound quality and durability.",
+
+  para4: "Whether you aspire to master a musical instrument or acquire an exquisite instrument for your performances, Shree Bhawani Musical Instrument and Classes is your premier destination. Join us on a journey of musical discovery and excellence."
+
 }
 
 const socialMediaLinks = {
   /* Your Social Media Link */
   github: "https://www.github.com/babanigit",
   linkedin: "https://www.linkedin.com/in/aniket-vilas-panchal",
-  gmail: "aniketpanchal07@gmail.com",
+  youtube: "https://youtube.com/@mangeshpatole4601?si=c1GfLlv3kIOJ2i61",
   gitlab: " ",
-  facebook: "https://www.facebook.com/profile.php?id=100014709424349",
+  facebook: "https://www.facebook.com/mangeshpatole639?mibextid=dGKdO6&rdid=BTWqFseFieHYTaJR",
   twitter: "",
   instagram: "https://instagram.com/changeyourthinkingg?igshid=MzRlODBiNWFlZA==",
 };
