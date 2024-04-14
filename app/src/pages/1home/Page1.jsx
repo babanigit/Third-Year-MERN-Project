@@ -2,8 +2,8 @@
 /* eslint-disable no-undef */
 
 import bmi from "../../assets/pngs/ganesha.png";
-import tabl2 from "../../assets/pngs/tabla2.png";
-import tabl3 from "../../assets/pngs/tabla.png";
+import tabla2 from "../../assets/pngs/tabla2.png";
+import tabla from "../../assets/pngs/tabla.png";
 import veena from "../../assets/pngs/veena.png";
 
 import { PortfolioData } from "../../assets/portfolio";
@@ -34,7 +34,7 @@ const Page1 = () => {
         {/* section 3 */}
         <div className=" grid  grid-flow-col grid-cols-3 place-items-center  gap-3 p-4 ">
           <div className="  grid ">
-            <img className=" w-[120px]" src={tabl2} />
+            <img className=" w-[120px]" src={tabla} />
           </div>
 
           <div className="  rounded-3xl grid col-span-2 p-10 bg-purple-300 bg-opacity-50 ">
@@ -50,7 +50,7 @@ const Page1 = () => {
           </div>
 
           <div className="  grid ">
-            <img className=" w-[120px]" src={tabl3} />
+            <img className=" w-[120px]" src={tabla2} />
           </div>
         </div>
 

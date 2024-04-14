@@ -58,7 +58,7 @@ const Admission = (props) => {
 
   return (
     <>
-      <div className=" grid place-items-center place-content-center h-full w-full gap-2">
+      <div className=" grid place-items-center place-content-center h-full w-full gap-2 p-6">
         <div className=" text-4xl"> Admission Form </div>
         <form
           onSubmit={handleSubmit}
@@ -92,7 +92,11 @@ const Admission = (props) => {
           <div>
             <label>Choose an instrument : </label>
             <select
-              style={{ background: props.theme.text, color: props.theme.body }}
+               style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
               className=" border-2 rounded-md"
               onChange={handleChange}
               id="instrument"
@@ -105,8 +109,11 @@ const Admission = (props) => {
           <div>
             <label>birthday : </label>
             <select
-              style={{ background: props.theme.text, color: props.theme.body }}
-              className=" border-2 rounded-md"
+ style={{
+  background: props.theme.body,
+  color: props.theme.text,
+  borderColor: props.theme.text,
+}}              className=" border-2 rounded-md"
               onChange={handleChange}
               id="dob1"
             >
@@ -114,16 +121,22 @@ const Admission = (props) => {
             </select>
 
             <select
-              style={{ background: props.theme.text, color: props.theme.body }}
-              className=" border-2 rounded-md"
+ style={{
+  background: props.theme.body,
+  color: props.theme.text,
+  borderColor: props.theme.text,
+}}              className=" border-2 rounded-md"
               onChange={handleChange}
               id="dob2"
             >
               {generateYearOptions2()}
             </select>
             <select
-              style={{ background: props.theme.text, color: props.theme.body }}
-              className=" border-2 rounded-md"
+ style={{
+  background: props.theme.body,
+  color: props.theme.text,
+  borderColor: props.theme.text,
+}}              className=" border-2 rounded-md"
               onChange={handleChange}
               id="dob3"
             >

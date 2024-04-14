@@ -13,7 +13,7 @@ import { style } from "glamor";
 import Aplayer from "./Aplayer.jsx";
 
 // images
-import tabla1 from "../../assets/pngs/bmi.jpg";
+import kalasha from "../../assets/pngs/kalasha.png";
 import { useMyContext } from "../../App.jsx";
 
 import { useSelector } from "react-redux";
@@ -37,7 +37,7 @@ function Header(props) {
     border: "none",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: props.theme.name === "light" ? "#7CD1F7" : "#292C3F",
+    // backgroundColor: props.theme.name === "light" ? "#7CD1F7" : "#292C3F",
     outline: "none",
     transition: "all 0.2s ease-in-out",
     ":hover": {
@@ -90,7 +90,7 @@ function Header(props) {
         <div className=" grid grid-flow-col place-items-center">
           <span className="logo-name">{greeting.logo_name}</span>
           <div className=" w-9">
-            <img src={tabla1} />
+            <img src={kalasha} />
           </div>
         </div>
       </NavLink>
@@ -112,35 +112,37 @@ function Header(props) {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            className="ec"
-            to="/updates"
-            tag={Link}
-            style={{ borderRadius: 5, color: theme.text }}
-          >
-            News and Admissions
-          </NavLink>
-        </li>
+      
         <li>
           <NavLink
             className="xp"
-            to="/gallery"
+            to="/events"
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Gallery
+            Events
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            className="ec"
+            to="/admission"
+            tag={Link}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            Admission
           </NavLink>
         </li>
        
         <li>
           <NavLink
             className="cr"
-            to="/aboutUs"
+            to="/contact"
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Aboutus and Contacts
+            Contact
           </NavLink>
         </li>
 
@@ -156,11 +158,11 @@ function Header(props) {
         </li>
 
         <div className="grid grid-flow-col place-items-center gap-1 ">
-          <button className=" flex " {...styles} onClick={changeTheme}>
+          <button className=" flex bg-blue-500 bg-opacity-50 " {...styles} onClick={changeTheme}>
             {icon}
           </button>
 
-          <button className=" flex " {...styles}>
+          <button className=" flex bg-green-500 bg-opacity-50 " {...styles}>
             {
               <Aplayer
                 setTabla={setTablaMode}
@@ -172,15 +174,17 @@ function Header(props) {
 
           <Link
           {...styles}
-          to="/profile">
+          to="/profile"
+          className=" bg-pink-500 bg-opacity-50 flex justify-center items-center"
+          >
             {currentUser ? (
               <img
                 src={currentUser.profilePicture}
                 alt="profile"
-                className="w-full rounded-full object-cover"
+                className="w-full rounded-full  object-cover"
               />
             ) : (
-              <li>Sign In</li>
+              <li >login</li>
             )}
           </Link>
         </div>

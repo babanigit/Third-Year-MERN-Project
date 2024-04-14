@@ -6,9 +6,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Splash from "../pages/0splash/Splash";
 import Home from "../pages/1home/HomeComponent";
-import UpdatesPage from "../pages/2updates,NewsAndAdmissions/UpdatesPage";
-import Gallery from "../pages/3galleryMediaCentre/Gallery";
-import AboutUs from "../pages/4aboutUs,ContactUsAndServices/AboutUs";
+import AdmissionPage from "../pages/2Admission/AdmissionPage";
+import EventPage from "../pages/3Events/EventPage";
+import ContactPage from "../pages/4Contact/ContactPage";
 import NotFound from "../components/other/NotFound";
 
 import ScrollToTop from "../components/other/ScrollToTop";
@@ -41,10 +41,10 @@ const Main = (props) => {
             <Route path="/signin" element={<SignInPage theme={props.theme} />} />
             <Route path="/signup" element={<SignUpPage theme={props.theme} />} />
             <Route path="/home" element={<Home theme={props.theme} />} />
-            <Route path="/updates" element={<UpdatesPage theme={props.theme} />} />
-            <Route path="/gallery" element={<Gallery theme={props.theme} />} />
+            <Route path="/admission" element={<AdmissionPage theme={props.theme} />} />
+            <Route path="/events" element={<EventPage theme={props.theme} />} />
             <Route path="/shop" element={<ShopePage theme={props.theme} />} />
-            <Route path="/aboutUs" element={<AboutUs theme={props.theme} />} />
+            <Route path="/contact" element={<ContactPage theme={props.theme} />} />
             <Route path="/splash" element={<Splash theme={props.theme} />} />
             <Route path="/*" element={<NotFound theme={props.theme} />} />
 
