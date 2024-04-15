@@ -5,60 +5,60 @@
 
 import { useState } from "react";
 
+import { useSelector, useDispatch } from "react-redux";
+
+import {
+  updateUserStart,
+  updateUserSuccess,
+  updateUserFailure,
+} from "../../redux/user/UserSlice";
+
+import { Form, Label, Input, Button, Col } from "reactstrap";
 
 const Admission = (props) => {
+  const dispatch = useDispatch();
 
+  const { currentUser, loading, error } = useSelector((state) => state.user);
+  const [errorData, setErrorData] = useState("");
   const [formData, setFormData] = useState({});
-
-
+  const [updateSuccess, setUpdateSuccess] = useState(false);
 
   const handleChange = async (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      dispatch(updateUserStart());
+
+      const res = await fetch(`/api/user/admission/${currentUser._id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      console.log(data);
+      setErrorData(data);
+
+      if (data.success === false) {
+        dispatch(updateUserFailure(data));
+        return;
+      }
+
+      dispatch(updateUserSuccess(data));
+      setUpdateSuccess(true);
+    } catch (error) {
+      dispatch(updateUserFailure(error));
+    }
+  };
 
   console.log("formData : ", formData);
-  // console.log("select ", select);
-
-  const generateYearOptions = () => {
-    const arr = [];
-
-    const startYear = 1900;
-    const endYear = new Date().getFullYear();
-
-    for (let i = endYear; i >= startYear; i--) {
-      arr.push(<option value={i}>{i}</option>);
-    }
-
-    return arr;
-  };
-
-  const generateYearOptions2 = () => {
-    const arr = [];
-
-    const startMonth = 1;
-    const endMonth = 12;
-
-    for (let i = endMonth; i >= startMonth; i--) {
-      arr.push(<option value={i}>{i}</option>);
-    }
-
-    return arr;
-  };
-
-  const generateYearOptions3 = () => {
-    const arr = [];
-
-    const startDate = 1;
-    const endDate = 31;
-
-    for (let i = endDate; i >= startDate; i--) {
-      arr.push(<option value={i}>{i}</option>);
-    }
-
-    return arr;
-  };
 
   return (
     <>
@@ -74,9 +74,9 @@ const Admission = (props) => {
               color: props.theme.text,
               borderColor: props.theme.text,
             }}
-            type="name"
+            type="fullName"
             placeholder="full name"
-            id="name"
+            id="fullName"
             className=" text-black w-[400px]  bg-slate-100 p-3 rounded-lg border-2"
             onChange={handleChange}
           />
@@ -112,52 +112,43 @@ const Admission = (props) => {
 
           <div>
             <label>Date of Birth : </label>
-            <select
-              style={{
-                background: props.theme.body,
-                color: props.theme.text,
-                borderColor: props.theme.text,
-              }}
-              className=" border-2 rounded-md"
-              onChange={handleChange}
-              id="year"
-            >
-              {generateYearOptions()}
-            </select>
 
-            <select
+            <Input
+              type="date"
+              placeholder="Enter BirthDate"
+              id="date"
+              value="date"
+              onChange={handleChange}
+              name="birthdate"
+              className=" w-12 border-2 rounded-md"
               style={{
                 background: props.theme.body,
                 color: props.theme.text,
                 borderColor: props.theme.text,
               }}
-              className=" border-2 rounded-md"
-              onChange={handleChange}
-              id="month"
-            >
-              {generateYearOptions2()}
-            </select>
-            <select
-              style={{
-                background: props.theme.body,
-                color: props.theme.text,
-                borderColor: props.theme.text,
-              }}
-              className=" border-2 rounded-md"
-              onChange={handleChange}
-              id="day"
-            >
-              {generateYearOptions3()}
-            </select>
+            />
           </div>
 
           <button
             style={{ background: props.theme.text, color: props.theme.body }}
             // disabled={loading}
-            className=" text-black w-[400px]  bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+            className="  w-[400px]  bg-slate-700  p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
           >
             {false ? "Loading..." : "submit"}
           </button>
+          <p
+            style={{ color: props.theme.body }}
+            className="  bg-red-300 bg-opacity-50 mt-5 rounded-md p-3 "
+          >
+            {error ? errorData.error || ":(" : ""}
+          </p>
+          <p
+            style={{ color: props.theme.body }}
+            className=" bg-green-300 bg-opacity-50 mt-5 rounded-md p-3 "
+          >
+            {updateSuccess &&
+              "admission added successfully!, will get back to you soon!"}
+          </p>
         </form>
       </div>
     </>

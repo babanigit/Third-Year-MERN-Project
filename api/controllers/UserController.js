@@ -1,5 +1,5 @@
 import createHttpError from "http-errors";
-import bcryptjs from 'bcryptjs';
+import bcryptjs from "bcryptjs";
 
 import User from "../models/UserModel.js";
 
@@ -29,8 +29,36 @@ export const updateUser = async (req, res, next) => {
 
     const { password, ...rest } = updatedUser._doc;
     res.status(200).json(rest);
+  } catch (error) {
+    next(error);
+  }
+};
 
+export const admissionUpdate = async (req, res, next) => {
+  try {
+    const { fullName, contact, date, instrument } = req.body;
 
+    if (!fullName) throw createHttpError(401, " please enter full name! ");
+
+    if (!contact) throw createHttpError(401, " please add contact ");
+
+    if (!date) throw createHttpError(401, " please select date! ");
+
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          fullName,
+          contact,
+          date,
+          instrument,
+        },
+      },
+      { new: true }
+    );
+
+    const { password, ...rest } = updatedUser._doc;
+    res.status(200).json(rest);
   } catch (error) {
     next(error);
   }
@@ -38,16 +66,13 @@ export const updateUser = async (req, res, next) => {
 
 // delete user
 export const deleteUser = async (req, res, next) => {
-    if (req.user.id !== req.params.id) {
-      throw createHttpError(401, 'You can delete only your account!')
-    }
-    try {
-
-      await User.findByIdAndDelete(req.params.id);
-      res.status(200).json('User has been deleted...');
-
-    } catch (error) {
-      next(error);
-    }
-  
+  if (req.user.id !== req.params.id) {
+    throw createHttpError(401, "You can delete only your account!");
   }
+  try {
+    await User.findByIdAndDelete(req.params.id);
+    res.status(200).json("User has been deleted...");
+  } catch (error) {
+    next(error);
+  }
+};
