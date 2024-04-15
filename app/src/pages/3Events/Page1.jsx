@@ -4,10 +4,11 @@
 const Page1 = () => {
   return (
     <>
-    
-    <div className=" min-h-screen" >
+    <div  className=" min-h-screen ">
+       <div>
 
-      shop 
+        hello
+       </div>
     </div>
     </>
   )

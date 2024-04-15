@@ -5,8 +5,12 @@
 
 import { useState } from "react";
 
+
 const Admission = (props) => {
+
   const [formData, setFormData] = useState({});
+
+
 
   const handleChange = async (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -92,7 +96,7 @@ const Admission = (props) => {
           <div>
             <label>Choose an instrument : </label>
             <select
-               style={{
+              style={{
                 background: props.theme.body,
                 color: props.theme.text,
                 borderColor: props.theme.text,
@@ -102,43 +106,46 @@ const Admission = (props) => {
               id="instrument"
             >
               <option value="tabla">Tabla</option>
-              <option value="pakwaj">Pakwaj</option>
+              <option value="pakhawaj">Pakhawaj</option>
             </select>
           </div>
 
           <div>
-            <label>birthday : </label>
+            <label>Date of Birth : </label>
             <select
- style={{
-  background: props.theme.body,
-  color: props.theme.text,
-  borderColor: props.theme.text,
-}}              className=" border-2 rounded-md"
+              style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
+              className=" border-2 rounded-md"
               onChange={handleChange}
-              id="dob1"
+              id="year"
             >
               {generateYearOptions()}
             </select>
 
             <select
- style={{
-  background: props.theme.body,
-  color: props.theme.text,
-  borderColor: props.theme.text,
-}}              className=" border-2 rounded-md"
+              style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
+              className=" border-2 rounded-md"
               onChange={handleChange}
-              id="dob2"
+              id="month"
             >
               {generateYearOptions2()}
             </select>
             <select
- style={{
-  background: props.theme.body,
-  color: props.theme.text,
-  borderColor: props.theme.text,
-}}              className=" border-2 rounded-md"
+              style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
+              className=" border-2 rounded-md"
               onChange={handleChange}
-              id="dob3"
+              id="day"
             >
               {generateYearOptions3()}
             </select>
