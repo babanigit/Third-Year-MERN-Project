@@ -38,6 +38,10 @@ export const admissionUpdate = async (req, res, next) => {
   try {
     const { fullName, contact, date, instrument } = req.body;
 
+    const userCheck = await User.findById(req.params.id);
+    if (userCheck.fullName != "default...")
+      throw createHttpError(401, " user already have done admission.");
+
     if (!fullName) throw createHttpError(401, " please enter full name! ");
 
     if (!contact) throw createHttpError(401, " please add contact ");

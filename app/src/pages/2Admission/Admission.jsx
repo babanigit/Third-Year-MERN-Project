@@ -137,14 +137,18 @@ const Admission = (props) => {
             {false ? "Loading..." : "submit"}
           </button>
           <p
-            style={{ color: props.theme.body }}
-            className="  bg-red-300 bg-opacity-50 mt-5 rounded-md p-3 "
+            style={{ color: props.theme.text }}
+            className={
+              error && " bg-red-500 bg-opacity-50 mt-5 rounded-md p-3 "
+            }
           >
             {error ? errorData.error || ":(" : ""}
           </p>
           <p
-            style={{ color: props.theme.body }}
-            className=" bg-green-300 bg-opacity-50 mt-5 rounded-md p-3 "
+            style={{ color: props.theme.text }}
+            className={
+              updateSuccess && " bg-green-500 bg-opacity-50 mt-5 rounded-md p-3"
+            }
           >
             {updateSuccess &&
               "admission added successfully!, will get back to you soon!"}
