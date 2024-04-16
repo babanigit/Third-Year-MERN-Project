@@ -52,7 +52,6 @@ function Header(props) {
 
   // function for theme changing
   function changeTheme() {
-
     if (currTheme === "light") {
       setThemeMode("dark");
       // localStorage.setItem("theme", "dark");
@@ -62,7 +61,6 @@ function Header(props) {
       // localStorage.setItem("theme", "light");
       setCurrTheme("light");
     }
-    
   }
 
   const icon =
@@ -82,16 +80,21 @@ function Header(props) {
 
   return (
     // <Fade top duration={1000} distance="20px">
-    <header className="header w-full  px-8 h-auto  "
-    style={{ background: props.theme.body, color: props.theme.text }}
-
+    <header
+      className="header w-full  px-8 h-auto  "
+      style={{ background: props.theme.body, color: props.theme.text }}
     >
       <NavLink to={link} tag={Link} className="logo">
-        <div className=" grid grid-flow-col place-items-center">
-          <span className="logo-name">{greeting.logo_name}</span>
-          <div className=" w-9">
-            <img src={kalasha} />
+        <div className=" grid-flow-row  grid place-items-start ">
+          <div className=" grid grid-flow-col place-items-center">
+            <span className="logo-name grid place-items-start ">{greeting.logo_name}</span>
+            <div className=" w-9">
+              <img src={kalasha} />
+            </div>
           </div>
+          <div
+          className=" text-sm"
+          >{greeting.logo_desc }</div>
         </div>
       </NavLink>
 
@@ -112,7 +115,7 @@ function Header(props) {
             Home
           </NavLink>
         </li>
-      
+
         <li>
           <NavLink
             className="xp"
@@ -120,21 +123,10 @@ function Header(props) {
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Events
+            Events & About us
           </NavLink>
         </li>
 
-        <li>
-          <NavLink
-            className="ec"
-            to="/admission"
-            tag={Link}
-            style={{ borderRadius: 5, color: theme.text }}
-          >
-            Admission
-          </NavLink>
-        </li>
-       
         <li>
           <NavLink
             className="cr"
@@ -157,8 +149,23 @@ function Header(props) {
           </NavLink>
         </li>
 
+        <li>
+          <NavLink
+            className="ec"
+            to="/admission"
+            tag={Link}
+            style={{ borderRadius: 5, color: theme.text }}
+          >
+            Admission & contact us
+          </NavLink>
+        </li>
+
         <div className="grid grid-flow-col place-items-center gap-1 ">
-          <button className=" flex bg-blue-500 bg-opacity-50 " {...styles} onClick={changeTheme}>
+          <button
+            className=" flex bg-blue-500 bg-opacity-50 "
+            {...styles}
+            onClick={changeTheme}
+          >
             {icon}
           </button>
 
@@ -173,9 +180,9 @@ function Header(props) {
           </button>
 
           <Link
-          {...styles}
-          to="/profile"
-          className=" bg-pink-500 bg-opacity-50 flex justify-center items-center"
+            {...styles}
+            to="/profile"
+            className=" bg-pink-500 bg-opacity-50 flex justify-center items-center"
           >
             {currentUser ? (
               <img
@@ -184,7 +191,7 @@ function Header(props) {
                 className="w-full rounded-full  object-cover"
               />
             ) : (
-              <li >login</li>
+              <li>login</li>
             )}
           </Link>
         </div>
