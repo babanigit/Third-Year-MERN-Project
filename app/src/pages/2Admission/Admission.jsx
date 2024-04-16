@@ -63,7 +63,7 @@ const Admission = (props) => {
   return (
     <>
       <div className=" grid place-items-center place-content-center h-full w-full gap-2 p-6">
-        <div className=" text-4xl"> Admission Form </div>
+        <div className=" text-3xl m-3"> Admission Form </div>
         <form
           onSubmit={handleSubmit}
           className=" w-[400px]  flex flex-col gap-4"

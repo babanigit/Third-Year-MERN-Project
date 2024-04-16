@@ -50,7 +50,7 @@ const Page1 = (props) => {
         >
           {/* header */}
           <div className=" h-full  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
-            <div>Contact us</div>
+            <div className=" " >Contact us</div>
             {/* <div>images</div> */}
           </div>
 
