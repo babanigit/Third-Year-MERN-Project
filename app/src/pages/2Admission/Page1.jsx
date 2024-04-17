@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
@@ -5,6 +6,9 @@ import Admission from "./Admission";
 
 import bmi from "../../assets/pngs/bmi.jpg";
 import { useSelector } from "react-redux";
+
+import man from "../../assets/pngs/man.png";
+import woman from "../../assets/pngs/woman.png";
 
 const Page1 = (props) => {
   const { currentUser } = useSelector((state) => state.user);
@@ -24,7 +28,7 @@ const Page1 = (props) => {
             <img className=" w-[220px] rounded-3xl " src={bmi} />
           </div>
 
-          {currentUser ? (
+          {true ? (
             <Admission theme={props.theme} />
           ) : (
             <>
@@ -34,23 +38,29 @@ const Page1 = (props) => {
             </>
           )}
         </div>
-        <div className="  h-full w-full grid place-items-center rounded-full ">
-          image
+        <div className="  w-full grid place-items-center bg-green-500 bg-opacity-45 rounded-full ">
+          <div className=" w-[40%]">
+          <img src={man} />
+
+          </div>
         </div>
       </div>
 
       <div className="  min-h-auto w-full grid grid-flow-col grid-cols-3 place-items-center p-3  ">
-        <div className="  h-full w-full grid justify-center items-center  bg-opacity-50 rounded-full">
-         image
+        <div className="  w-full grid place-items-center bg-blue-500 bg-opacity-45 rounded-full ">
+          <div className=" w-[40%]">
+            <img src={woman} />
+
+          </div>
         </div>
 
         <div
           style={{ borderColor: props.theme.text }}
-          className=" bg-purple-300 bg-opacity-50  min-h-[400px] min-w-[600px] col-span-2 grid-rows-4 border-2 rounded-3xl  grid items-center p-[3%] "
+          className=" bg-green-300 bg-opacity-50  min-h-[400px] min-w-[600px] col-span-2 grid-rows-4 border-2 rounded-3xl  grid items-center p-[3%] "
         >
           {/* header */}
           <div className=" h-full  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
-            <div className=" " >Contact us</div>
+            <div className=" ">Contact us</div>
             {/* <div>images</div> */}
           </div>
 

@@ -33,6 +33,8 @@ const Admission = (props) => {
     try {
       dispatch(updateUserStart());
 
+      console.log("current User ", currentUser)
+
       const res = await fetch(`/api/user/admission/${currentUser._id}`, {
         method: "POST",
         headers: {
@@ -142,7 +144,7 @@ const Admission = (props) => {
               error && " bg-red-500 bg-opacity-50 mt-5 rounded-md p-3 "
             }
           >
-            {error ? errorData.error || ":(" : ""}
+            {error ? errorData.error || "you have'nt logged in :(" : ""}
           </p>
           <p
             style={{ color: props.theme.text }}

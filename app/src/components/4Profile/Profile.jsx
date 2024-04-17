@@ -243,7 +243,7 @@ const Profile = (props) => {
           </div>
           <p className="text-red-700 mt-5">
             {error
-              ? errorData.error || "Something went wrong(from singIn.jsx)!"
+              ? errorData.error || "!"
               : ""}
           </p>
           <p className="text-green-700 mt-5">

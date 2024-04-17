@@ -87,14 +87,14 @@ function Header(props) {
       <NavLink to={link} tag={Link} className="logo">
         <div className=" grid-flow-row  grid place-items-start ">
           <div className=" grid grid-flow-col place-items-center">
-            <span className="logo-name grid place-items-start ">{greeting.logo_name}</span>
+            <span className="logo-name grid place-items-start ">
+              {greeting.logo_name}
+            </span>
             <div className=" w-9">
               <img src={kalasha} />
             </div>
           </div>
-          <div
-          className=" text-sm"
-          >{greeting.logo_desc }</div>
+          <div className=" text-sm">{greeting.logo_desc}</div>
         </div>
       </NavLink>
 
@@ -123,18 +123,7 @@ function Header(props) {
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Events & About us
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink
-            className="cr"
-            to="/contact"
-            tag={Link}
-            style={{ borderRadius: 5, color: theme.text }}
-          >
-            Contact
+            Events & About
           </NavLink>
         </li>
 
@@ -145,7 +134,7 @@ function Header(props) {
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            shop
+            Shop
           </NavLink>
         </li>
 
@@ -156,7 +145,7 @@ function Header(props) {
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Admission & contact us
+            Admission & Contact
           </NavLink>
         </li>
 
