@@ -15,6 +15,40 @@ const greeting = {
   logo_desc:"Shri Bhawani Musicals And Instruments"
 };
 
+export const aboutSir =[
+  {
+    id: 1,
+    bg:"bg-pink-300",
+    title: "div1",
+    content: "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
+  },
+  {
+    id: 2,
+    bg:"bg-green-300",
+    title: "div2",
+    content: "Beyond his role as an educator, Patole actively participates in various musical endeavors, including performances in official Orchestras, Bhajan Mandals, and the renowned musical ensemble known as Shakti-Tura. His interest in this field extends to the craftsmanship of percussion instruments such as Pakhwaj, Tabla, Dholki, and Dholak.",
+  },
+  {
+    id: 3,
+    bg:"bg-blue-300",
+    title: "div3",
+    content: "Patole's dedication to his craft has earned him the prestigious degree of 'Alankar' from Akhil Bharatiya Gandharv Mahavidyala, an esteemed institution dedicated to the promotion and propagation of Indian classical music and dance.",
+  },
+  {
+    id: 4,
+    bg:"bg-yellow-300",
+    title: "div3",
+    content: "Under his leadership, Shri Bhawani Musicals Instruments & Manufacturer has flourished, extending its reach across multiple locations including Malad, Borivali, Virar, with its main branch situated in Nalasopara and many more to come.",
+  },
+  // {
+  //   id: 5,
+  //   bg:"bg-purple-300",
+  //   title: "div3",
+  //   content: "homei",
+  // },
+
+]
+
 export const PortfolioData = {
   para: "Shree Bhawani Musical Instrument and Classes is a distinguished institution dedicated to the preservation and dissemination of Indian classical music traditions. We specialize in providing comprehensive training in instruments like Pakhawaj, Tabla, and others, imparting both theoretical knowledge and practical skills to our students.",
 
