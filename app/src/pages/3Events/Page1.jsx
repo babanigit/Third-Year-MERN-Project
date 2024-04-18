@@ -9,16 +9,15 @@ const Page1 = () => {
         <div className=" col-span-2  grid  grid-flow-row gap-5 ">
           {aboutSir.map((prop) => {
             return (
-              <>
-                <div
-                  className={
-                    " rounded-2xl p-3 px-10 flex place-content-center place-items-center bg-opacity-45 text-xl "+prop.bg
-                  }
-                  key={prop.id}
-                >
-                  {prop.content}
-                </div>
-              </>
+              <div
+                className={
+                  " rounded-2xl p-3 px-10 flex place-content-center place-items-center bg-opacity-45 text-xl " +
+                  prop.bg
+                }
+                key={prop.id}
+              >
+                {prop.content}
+              </div>
             );
           })}
         </div>
@@ -30,7 +29,6 @@ const Page1 = () => {
       </div>
 
       {/* page2 */}
-      
     </>
   );
 };

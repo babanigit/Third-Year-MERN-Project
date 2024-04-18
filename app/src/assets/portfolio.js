@@ -12,42 +12,129 @@ const greeting = {
   title: "Hello.",
   title2: "TY-BCA",
   logo_name: "BMI",
-  logo_desc:"Shri Bhawani Musicals And Instruments"
+  logo_desc: "Shri Bhawani Musicals And Instruments",
 };
 
-export const aboutSir =[
+
+export const aboutSir = [
   {
     id: 1,
-    bg:"bg-pink-300",
-    title: "div1",
-    content: "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
+    bg: "bg-pink-300",
+    content:
+      "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
   },
   {
     id: 2,
-    bg:"bg-green-300",
-    title: "div2",
-    content: "Beyond his role as an educator, Patole actively participates in various musical endeavors, including performances in official Orchestras, Bhajan Mandals, and the renowned musical ensemble known as Shakti-Tura. His interest in this field extends to the craftsmanship of percussion instruments such as Pakhwaj, Tabla, Dholki, and Dholak.",
+    bg: "bg-green-300",
+    content:
+      "Beyond his role as an educator, Patole actively participates in various musical endeavors, including performances in official Orchestras, Bhajan Mandals, and the renowned musical ensemble known as Shakti-Tura. His interest in this field extends to the craftsmanship of percussion instruments such as Pakhwaj, Tabla, Dholki, and Dholak.",
   },
   {
     id: 3,
-    bg:"bg-blue-300",
-    title: "div3",
-    content: "Patole's dedication to his craft has earned him the prestigious degree of 'Alankar' from Akhil Bharatiya Gandharv Mahavidyala, an esteemed institution dedicated to the promotion and propagation of Indian classical music and dance.",
+    bg: "bg-blue-300",
+    content:
+      "Patole's dedication to his craft has earned him the prestigious degree of 'Alankar' from Akhil Bharatiya Gandharv Mahavidyala, an esteemed institution dedicated to the promotion and propagation of Indian classical music and dance.",
   },
   {
     id: 4,
-    bg:"bg-yellow-300",
-    title: "div3",
-    content: "Under his leadership, Shri Bhawani Musicals Instruments & Manufacturer has flourished, extending its reach across multiple locations including Malad, Borivali, Virar, with its main branch situated in Nalasopara and many more to come.",
+    bg: "bg-yellow-300",
+    content:
+      "Under his leadership, Shri Bhawani Musicals Instruments & Manufacturer has flourished, extending its reach across multiple locations including Malad, Borivali, Virar, with its main branch situated in Nalasopara and many more to come.",
+  },
+
+];
+
+
+export const eventBMI = [
+  {
+    id: 1,
+    content:
+      "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
+  },
+  {
+    id: 2,
+    content:
+      "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
+  },
+  {
+    id: 3,
+    content:
+      "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
+  },
+  {
+    id: 4,
+    content:
+      "Mangesh Chandrakant Patole, the proprietor of Shri Bhawani Musical Instruments & Manufacturer, is a highly esteemed percussionist with over 15 years of experience in the field of percussion. His journey commenced at the age of 8 under the guidance of his father, Chandrakant Patole, mastering the art of 'Pakhwaj'. In 2007, he established Shri Bhawani Musical Instruments & Manufacturer, dedicating himself to both the instruction and production of percussion instruments.",
+  },
+];
+
+export const rs1 = [
+  {
+    id: 4,
+    link: "https://i.ibb.co/PrJh06n/image15.jpg",
+  },
+  {
+    id: 5,
+    link: "https://i.ibb.co/wgGrYXf/image16.jpg",
+  },
+];
+
+// https://i.ibb.co/9snx9Fs/image66.jpg
+// https://i.ibb.co/Bs0B3mq/image68.jpg
+// https://i.ibb.co/hdTkBvW/image69.jpg
+
+export const rs2 = [
+  {
+    id: 1,
+    link: "https://i.ibb.co/9snx9Fs/image66.jpg",
+  },
+  {
+    id: 2,
+    link: "https://i.ibb.co/Bs0B3mq/image68.jpg",
+  },
+  {
+    id: 4,
+    link: "https://i.ibb.co/hdTkBvW/image69.jpg",
+  },
+];
+
+// https://i.ibb.co/TLgCCgL/image90.jpg
+// https://i.ibb.co/nf9Y4hj/image92.jpg
+// https://i.ibb.co/HGNxVgL/image96.jpg
+
+export const rs3 = [
+  {
+    id: 1,
+    link: "https://i.ibb.co/TLgCCgL/image90.jpg",
+  },
+  {
+    id: 2,
+    link: "https://i.ibb.co/nf9Y4hj/image92.jpg",
+  },
+  {
+    id: 3,
+    link: "https://i.ibb.co/HGNxVgL/image96.jpg",
+  },
+];
+
+// https://i.ibb.co/QnL782V/image60.jpg
+// https://i.ibb.co/b5R5qLY/image63.jpg
+// https://i.ibb.co/Lv36nF6/image65.jpg
+
+export const rs4 = [
+  {
+    id: 1,
+    link: "https://i.ibb.co/QnL782V/image60.jpg",
   },
   // {
-  //   id: 5,
-  //   bg:"bg-purple-300",
-  //   title: "div3",
-  //   content: "homei",
+  //   id: 2,
+  //   link: "https://i.ibb.co/b5R5qLY/image63.jpg",
   // },
-
-]
+  {
+    id: 3,
+    link: "https://i.ibb.co/Lv36nF6/image65.jpg",
+  },
+];
 
 export const PortfolioData = {
   para: "Shree Bhawani Musical Instrument and Classes is a distinguished institution dedicated to the preservation and dissemination of Indian classical music traditions. We specialize in providing comprehensive training in instruments like Pakhawaj, Tabla, and others, imparting both theoretical knowledge and practical skills to our students.",
