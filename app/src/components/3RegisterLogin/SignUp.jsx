@@ -109,9 +109,9 @@ const SignUp = (props) => {
             <Link to="/signin">
               <span className="text-blue-500">Sign in</span>
             </Link>
-            <Link to="/admin">
+            {/* <Link to="/admin">
               <span className="text-red-500">Admin</span>
-            </Link>
+            </Link> */}
           </div>
           <p className="text-red-500 mt-5">
             {error

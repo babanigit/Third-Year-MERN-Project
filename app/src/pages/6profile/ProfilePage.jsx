@@ -8,9 +8,9 @@ import Profile from "../../components/4Profile/Profile"
 const ProfilePage = (props) => {
   return (
     <>
-    <div className=" h-screen">
+    <div className=" h-screen ">
 
-    <div className=" fixed  ">
+    <div className=" fixed w-screen ">
 
     <Header theme={props.theme}  />
     </div>

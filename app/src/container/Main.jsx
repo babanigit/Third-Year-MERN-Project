@@ -56,22 +56,26 @@ const Main = (props) => {
             <Route path="/splash" element={<Splash theme={props.theme} />} />
             <Route path="/*" element={<NotFound theme={props.theme} />} />
 
-            
-
             {/* private */}
             <Route element={<PrivateRoute />}>
+
               <Route
                 path="/profile"
                 element={<ProfilePage theme={props.theme} />}
               />
+
+             
             </Route>
 
-            <Route element={<PrivateRoute2 />} >
-           
-           {/* admin */}
-           <Route path="/admin" element={<AdminPage theme={props.theme} />} >
-              <Route path="users" element={<AdminUser />}  />
-            </Route>
+            <Route element={<PrivateRoute2 />}>
+
+  {/* admin */}
+  <Route path="/admin" element={<AdminPage theme={props.theme} />}>
+                <Route path="users" element={<AdminUser />} />
+
+              </Route>
+
+             
             </Route>
 
           </Routes>

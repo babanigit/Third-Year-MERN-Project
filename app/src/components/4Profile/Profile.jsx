@@ -37,7 +37,7 @@ const Profile = (props) => {
   const [updateSuccess, setUpdateSuccess] = useState(false);
 
   const { currentUser, loading, error } = useSelector((state) => state.user);
-  console.log("corrUser : ",currentUser)
+  console.log("corrUser : ", currentUser);
 
   const [errorData, setErrorData] = useState("");
 
@@ -74,7 +74,7 @@ const Profile = (props) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  console.log("formData : ", formData)
+  console.log("formData : ", formData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -139,8 +139,7 @@ const Profile = (props) => {
     }
   };
 
-
-  console.log("current porfile ", currentUser.profilePicture)
+  console.log("current porfile ", currentUser.profilePicture);
 
   return (
     <>
@@ -223,7 +222,7 @@ const Profile = (props) => {
               className="bg-slate-100 rounded-lg p-3 border-2 "
               onChange={handleChange}
             />
-             <input
+            <input
               style={{
                 background: props.theme.body,
                 color: props.theme.text,
@@ -250,21 +249,31 @@ const Profile = (props) => {
             >
               Delete Account
             </span>
-            <Link to="/admin">
-              <span className="text-red-500">Admin</span>
-            </Link>
-            <span
-              onClick={handleSignOut}
-              className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
-              style={{ background: props.theme.body, color: props.theme.text }}
-            >
-              Sign out
-            </span>
+
+            <div className="flex gap-2">
+              {currentUser.isAdmin && (
+                <Link
+                className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
+                to="/admin"
+              >
+                <span className="text-red-500">Admin</span>
+              </Link>
+              )}
+              
+              <span
+                onClick={handleSignOut}
+                className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
+                style={{
+                  background: props.theme.body,
+                  color: props.theme.text,
+                }}
+              >
+                Sign out
+              </span>
+            </div>
           </div>
           <p className="text-red-700 mt-5">
-            {error
-              ? errorData.error || "!"
-              : ""}
+            {error ? errorData.error || "!" : ""}
           </p>
           <p className="text-green-700 mt-5">
             {updateSuccess && "User is updated successfully!"}
