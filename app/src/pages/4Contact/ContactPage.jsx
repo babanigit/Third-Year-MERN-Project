@@ -7,23 +7,18 @@ const ContactPage = (props) => {
   return (
     <>
       <div className=" ">
-        
         <div>
-
-        <Header theme={props.theme} setTheme={props.setTheme} />
+          <Header theme={props.theme} setTheme={props.setTheme} />
         </div>
-        
-        <div>
 
+        <div>
           <Page />
         </div>
 
         <div>
-
-      <Footer theme={props.theme} />
+          <Footer theme={props.theme} />
         </div>
       </div>
-
     </>
   );
 };

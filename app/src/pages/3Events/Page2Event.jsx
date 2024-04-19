@@ -7,7 +7,8 @@ import RS4 from "./RS/RS4";
 const Page2Event = () => {
   return (
     <>
-      <div className=" p-4 min-h-screen bg-purple-300 gap-4 grid">
+    <h1 className=" text-3xl flex place-content-center">Events</h1>
+      <div className=" p-4 min-h-screen  gap-4 grid">
         {eventBMI.map((p) => {
           var renderComponent;
 
@@ -34,17 +35,20 @@ const Page2Event = () => {
 
           return (
             <div
-              className=" bg-red-200 grid grid-flow-col grid-cols-3 p-3 text-xl"
-              key={p.id}>
-
+              className=" grid grid-flow-col grid-cols-3 p-3 text-xl "
+              key={p.id}
+            >
               <div className=" flex place-content-center place-items-center ">
-
-                <div className="w-[60%]">
-                  {renderComponent}
-                </div>
+                <div className="w-[60%]">{renderComponent}</div>
               </div>
-              <div className=" grid col-span-2 place-content-center place-items-center" >{p.content}</div>
-
+              <div
+                className={
+                  " grid col-span-2 place-content-center place-items-center bg-opacity-45 rounded-2xl p-5 " +
+                  p.bg
+                }
+              >
+                {p.content}
+              </div>
             </div>
           );
         })}

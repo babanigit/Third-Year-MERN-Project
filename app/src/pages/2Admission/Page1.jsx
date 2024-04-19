@@ -7,8 +7,8 @@ import Admission from "./Admission";
 import bmi from "../../assets/pngs/bmi.jpg";
 import { useSelector } from "react-redux";
 
-import man from "../../assets/pngs/man.png";
-import woman from "../../assets/pngs/woman.png";
+import kumkuma from "../../assets/pngs/kumkuma.png";
+import kalasha from "../../assets/pngs/kalasha.png";
 
 const Page1 = (props) => {
   const { currentUser } = useSelector((state) => state.user);
@@ -40,7 +40,7 @@ const Page1 = (props) => {
         </div>
         <div className="  w-full grid place-items-center bg-green-500 bg-opacity-45 rounded-full ">
           <div className=" w-[40%]">
-          <img src={man} />
+          <img src={kumkuma} />
 
           </div>
         </div>
@@ -49,7 +49,7 @@ const Page1 = (props) => {
       <div className="  min-h-auto w-full grid grid-flow-col grid-cols-3 place-items-center p-3  ">
         <div className="  w-full grid place-items-center bg-blue-500 bg-opacity-45 rounded-full ">
           <div className=" w-[40%]">
-            <img src={woman} />
+            <img src={kalasha} />
 
           </div>
         </div>
