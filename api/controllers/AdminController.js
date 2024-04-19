@@ -13,3 +13,21 @@ export const getAllUser = async (req, res, next) => {
     next(error);
   }
 };
+
+export const deleteUser = async (req, res, next) => {
+
+  try {
+
+    const id =  req.params.id
+    await User.deleteOne({_id:id})
+
+    res.status(200).json({
+      message:"user deleted"
+    })
+
+  } catch (error) {
+    next(error)
+  }
+
+
+}
