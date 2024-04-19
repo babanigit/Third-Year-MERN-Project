@@ -12,7 +12,7 @@ console.log(token)
   // verify token
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) throw createHttpError(403, "token is not valid! ");
-    console.log(user)
+    // console.log(user)
     req.user = user;
     next();
   });

@@ -73,6 +73,8 @@ const Profile = (props) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
+  console.log("formData : ", formData)
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -217,6 +219,18 @@ const Profile = (props) => {
               type="password"
               id="password"
               placeholder="Password"
+              className="bg-slate-100 rounded-lg p-3 border-2 "
+              onChange={handleChange}
+            />
+             <input
+              style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
+              type="text"
+              id="adminC"
+              placeholder="become admin"
               className="bg-slate-100 rounded-lg p-3 border-2 "
               onChange={handleChange}
             />

@@ -41,6 +41,10 @@ const userSchema = new Mongoose.Schema(
       type: String,
       default: "Tabla..."
     },
+    isAdmin: {
+      type: Boolean,
+      default: false
+    },
   },
   { timestamps: true }
 );
