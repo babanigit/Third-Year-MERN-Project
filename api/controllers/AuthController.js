@@ -61,6 +61,8 @@ export const google = async (req, res, next) => {
 
     try {
 
+      console.log("photo url ", req.body.photo)
+
         const user = await User.findOne({ email: req.body.email });
         if (user) {
 
@@ -94,7 +96,6 @@ export const google = async (req, res, next) => {
             password: hashedPassword,
             profilePicture: req.body.photo,
           });
-
 
           await newUser.save();
 

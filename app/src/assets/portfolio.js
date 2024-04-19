@@ -48,7 +48,7 @@ export const eventBMI = [
     bg: "bg-pink-300",
 
     content:
-    "Gurupoojan, an annual event commemorating Guru Purnima, venerates the wisdom and knowledge imparted by teachers. Commencing with Ganesh poojan, students showcase solo performances on instruments such as Pakhwaj, Tabla, and Dholki. Devotional 'Bhajans' follow these presentations. Culminating the event, the teacher graces the audience with an instrumental performance, before delivering an inspiring speech. Thus, Gurupoojan serves as a testament to the profound impact of mentorship and learning.",
+      "Gurupoojan, an annual event commemorating Guru Purnima, venerates the wisdom and knowledge imparted by teachers. Commencing with Ganesh poojan, students showcase solo performances on instruments such as Pakhwaj, Tabla, and Dholki. Devotional 'Bhajans' follow these presentations. Culminating the event, the teacher graces the audience with an instrumental performance, before delivering an inspiring speech. Thus, Gurupoojan serves as a testament to the profound impact of mentorship and learning.",
   },
   {
     id: 2,
