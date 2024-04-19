@@ -139,6 +139,31 @@ const Profile = (props) => {
     }
   };
 
+  const adminRemove = async () => {
+    try {
+      const res = await fetch(`/api/user/adminUpdate/${currentUser._id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await res.json();
+      console.log("erennn ", data);
+
+      if (data.success === false) {
+        dispatch(updateUserFailure(data));
+        return;
+      }
+
+      dispatch(updateUserSuccess(data));
+      setUpdateSuccess(true);
+
+    } catch (error) {
+      dispatch(updateUserFailure(error));
+    }
+  };
+
   console.log("current porfile ", currentUser.profilePicture);
 
   return (
@@ -228,7 +253,7 @@ const Profile = (props) => {
                 color: props.theme.text,
                 borderColor: props.theme.text,
               }}
-              type="text"
+              type="password"
               id="adminC"
               placeholder="become admin (enter the valid pass)"
               className="bg-slate-100 rounded-lg p-3 border-2 "
@@ -252,14 +277,28 @@ const Profile = (props) => {
 
             <div className="flex gap-2">
               {currentUser.isAdmin && (
-                <Link
-                className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
-                to="/admin"
-              >
-                <span className="text-red-500">Admin</span>
-              </Link>
+                <>
+                  <Link
+                    className="cursor-pointer border-2 p-2 rounded-md border-blue-500 "
+                    to="/admin"
+                  >
+                    <span className="text-blue-500">Admin </span>
+                  </Link>
+
+                  <Link
+                    className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
+                    // to="/admin"
+                  >
+                    <span
+                      className="text-red-500"
+                      onClick={() => adminRemove()}
+                    >
+                      remove as admin
+                    </span>
+                  </Link>
+                </>
               )}
-              
+
               <span
                 onClick={handleSignOut}
                 className="cursor-pointer border-2 p-2 rounded-md border-red-500 "

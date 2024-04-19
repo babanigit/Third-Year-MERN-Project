@@ -15,7 +15,7 @@ export const updateUser = async (req, res, next) => {
     }
 
     var adminState =false
-    if (req.body.adminC == "6920"){
+    if (req.body.adminC == "admin6920"){
       adminState= true
     }else{
       adminState=false
@@ -76,6 +76,31 @@ export const admissionUpdate = async (req, res, next) => {
     next(error);
   }
 };
+
+export const adminFalse = async (req, res, next) => {
+  try {
+    console.log("clicked on adminFalse")
+    // const {adminState}=req.body
+    // const userCheck = await User.findById(req.params.id);
+
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          isAdmin:false
+        },
+      },
+      { new: true }
+    );
+
+    const { password, ...rest } = updatedUser._doc;
+    res.status(200).json(rest);
+    
+  } catch (error) {
+    next(error)
+  }
+
+}
 
 
 

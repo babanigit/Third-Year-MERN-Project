@@ -3,7 +3,7 @@ import createHttpError from "http-errors";
 
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.access_token;
-console.log(token)
+// console.log(token)
   if (!token) throw createHttpError(401, "you are not authenticated! ");
 
   if (!process.env.JWT_SECRET) {
