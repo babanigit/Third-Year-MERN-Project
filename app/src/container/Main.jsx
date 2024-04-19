@@ -19,6 +19,7 @@ import ShopePage from "../pages/5shop/ShopePage";
 
 import AdminPage from "../pages/8admin/AdminPage";
 import AdminUser from "../components/adminuser/AdminUser";
+import PrivateRoute2 from "../components/other/PrivateRoute2";
 
 // import UseScrollToTop from "../components/UseScrollToTop";
 
@@ -55,10 +56,7 @@ const Main = (props) => {
             <Route path="/splash" element={<Splash theme={props.theme} />} />
             <Route path="/*" element={<NotFound theme={props.theme} />} />
 
-            {/* admin */}
-            <Route path="/admin" element={<AdminPage theme={props.theme} />} >
-              <Route path="users" element={<AdminUser />}  />
-            </Route>
+            
 
             {/* private */}
             <Route element={<PrivateRoute />}>
@@ -66,6 +64,14 @@ const Main = (props) => {
                 path="/profile"
                 element={<ProfilePage theme={props.theme} />}
               />
+            </Route>
+
+            <Route element={<PrivateRoute2 />} >
+           
+           {/* admin */}
+           <Route path="/admin" element={<AdminPage theme={props.theme} />} >
+              <Route path="users" element={<AdminUser />}  />
+            </Route>
             </Route>
 
           </Routes>

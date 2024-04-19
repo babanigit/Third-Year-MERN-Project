@@ -37,6 +37,7 @@ const Profile = (props) => {
   const [updateSuccess, setUpdateSuccess] = useState(false);
 
   const { currentUser, loading, error } = useSelector((state) => state.user);
+  console.log("corrUser : ",currentUser)
 
   const [errorData, setErrorData] = useState("");
 
@@ -91,7 +92,7 @@ const Profile = (props) => {
 
       const data = await res.json();
 
-      console.log(data);
+      console.log("updateProfile : ", data);
       setErrorData(data);
 
       if (data.success === false) {
@@ -145,10 +146,10 @@ const Profile = (props) => {
     <>
       <div
         style={{ background: props.theme.body, color: props.theme.text }}
-        className=" max-w-lg m-auto grid place-content-center "
+        className=" max-w-lg m-auto flex place-items-center place-content-center h-screen "
       >
         <div className="  max-w-lg mx-auto   w-screen">
-          <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
+          {/* <h1 className="text-3xl font-semibold text-center my-7">Profile</h1> */}
           <form onSubmit={handleSubmit} className="flex h-auto flex-col gap-4">
             <input
               type="file"
@@ -230,7 +231,7 @@ const Profile = (props) => {
               }}
               type="text"
               id="adminC"
-              placeholder="become admin"
+              placeholder="become admin (enter the valid pass)"
               className="bg-slate-100 rounded-lg p-3 border-2 "
               onChange={handleChange}
             />

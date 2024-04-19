@@ -21,6 +21,7 @@ export const updateUser = async (req, res, next) => {
       adminState=false
       throw createHttpError(401," invalid admin pass ")
     }
+    
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
       {

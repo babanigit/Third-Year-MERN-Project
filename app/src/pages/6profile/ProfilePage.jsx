@@ -10,8 +10,10 @@ const ProfilePage = (props) => {
     <>
     <div className=" h-screen">
 
-    
+    <div className=" fixed  ">
+
     <Header theme={props.theme}  />
+    </div>
 
     <Profile theme={props.theme}  />
 
