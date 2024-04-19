@@ -11,6 +11,8 @@ import createHttpError, { isHttpError } from "http-errors";
 import authRoute from "./routes/AuthRoute.js"
 import userRoute from "./routes/UserRoute.js"
 
+import adminRoute from "./routes/AdminRoute.js"
+
 
 import dotenv from 'dotenv';
 import { verifyToken } from './utils/VerifyUser.js';
@@ -73,6 +75,7 @@ app.use(session({
 // routes
 app.use("/api/auth",authRoute)
 app.use("/api/user",userRoute)
+app.use("/api/admin",adminRoute) //admin
 
 
 

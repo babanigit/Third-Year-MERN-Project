@@ -2,6 +2,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import { Link } from "react-router-dom";
+
 import { useSelector } from "react-redux";
 import { useRef, useState, useEffect } from "react";
 import {
@@ -225,7 +227,7 @@ const Profile = (props) => {
               {loading ? "Loading..." : "Update"}
             </button>
           </form>
-          <div className="flex justify-between mt-5">
+          <div className="flex justify-between place-items-center mt-5">
             <span
               onClick={handleDeleteAccount}
               className=" cursor-pointer border-2 p-2 rounded-md border-red-500 "
@@ -233,6 +235,9 @@ const Profile = (props) => {
             >
               Delete Account
             </span>
+            <Link to="/admin">
+              <span className="text-red-500">Admin</span>
+            </Link>
             <span
               onClick={handleSignOut}
               className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
