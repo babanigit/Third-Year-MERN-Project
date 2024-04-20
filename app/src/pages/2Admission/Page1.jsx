@@ -8,6 +8,8 @@ import bmi from "../../assets/pngs/bmi.jpg";
 import { useSelector } from "react-redux";
 
 import kumkuma from "../../assets/pngs/kumkuma.png";
+import { fessStructure } from "../../assets/about";
+import Fees from "./Fees";
 
 // import Contact from "../../components/7Contact/Contact";
 
@@ -17,9 +19,9 @@ const Page1 = (props) => {
   return (
     <>
       <div className=" p-4 grid gap-2 h-screen">
-        <div className=" grid place-items-center  grid-flow-col grid-cols-3 p-4 bg-green- bg-opacity-50 rounded-3xl  ">
+        <div className=" grid place-items-center grid-flow-col grid-cols-2 p-4 bg-green- bg-opacity-50 rounded-3xl  ">
           <div
-            className="  w-fit  p-7 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50 col-span-2 "
+            className="  w-fit  p-7 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50  "
             style={{
               // background: props.theme.body,
               // color: props.theme.text,
@@ -43,8 +45,37 @@ const Page1 = (props) => {
             )}
           </div>
           <div className="  w-full grid place-items-center  bg-opacity-45 rounded-full ">
-            <div className=" w-[100px]">
-              <img src={kumkuma} />
+            <div className=" ">
+              {/* <img src={kumkuma} /> */}
+
+              <div className=" hidden md:block" >
+
+              <Fees />
+              </div>
+              {/* <div className=" flex justify-center">
+                <table className="border-collapse border border-gray-400 ">
+                  <thead className="bg-purple-300">
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">
+                        Remarks
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">Fees</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {fessStructure.map((prop) => (
+                      <tr key={prop.id} className="border border-gray-400">
+                        <td className="border border-gray-400 px-4 py-2">
+                          {prop.remark}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          {prop.fee}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div> */}
             </div>
           </div>
         </div>

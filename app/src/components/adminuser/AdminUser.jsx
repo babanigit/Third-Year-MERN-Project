@@ -55,66 +55,54 @@ const AdminUser = () => {
           Admin user data
         </div>
 
-        <div>
-          <table className="  rounded-xl p-4 w-full ">
-            <thead>
-              <tr className=" bg-red-200">
-                <th className=" bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl ">
-                  username
-                </th>
-                <th className=" bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl ">
-                  email
-                </th>
-                <th className=" bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl ">
-                  contact
-                </th>
-                <th className=" bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl ">
-                  instrument
-                </th>
-                {/* <th className=" bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl ">
-                  Update
-                </th> */}
-                {/* <th className=" bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl ">
-                  Delete
-                </th> */}
-              </tr>
-            </thead>
+        <div className="overflow-x-auto">
+  <table className="rounded-xl p-2 md:p-4 w-full">
+    <thead>
+      <tr className="bg-red-200">
+        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+          username
+        </th>
+        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+          email
+        </th>
+        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+          contact
+        </th>
+        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+          instrument
+        </th>
+        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+          Delete
+        </th>
+      </tr>
+    </thead>
 
-            <tbody>
-              {user.map((curr) => {
-                return (
-                  <tr  key={curr.id} >
-                    <td className="  bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl  ">
-                      {" "}
-                      {curr.username}{" "}
-                    </td>
-                    <td className="  bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl  ">
-                      {" "}
-                      {curr.email}{" "}
-                    </td>
-                    <td className="  bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl  ">
-                      {" "}
-                      {curr.contact}{" "}
-                    </td>
-                    <td className="  bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl  ">
-                      {" "}
-                      {curr.instrument}{" "}
-                    </td>
-                    {/* <td className="  bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl  ">
-                      {" "}
-                      edit{" "}
-                    </td> */}
-                    <td className="  bg-purple-400  bg-opacity-50 border-2 border-gray-800  p-2 px-5 rounded-full flex place-content-center  ">
-                      <button onClick={() => deleteUser(curr._id)}>
-                        delete
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+    <tbody>
+      {user.map((curr) => {
+        return (
+          <tr key={curr.id}>
+            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+              {curr.username}
+            </td>
+            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+              {curr.email}
+            </td>
+            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+              {curr.contact}
+            </td>
+            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+              {curr.instrument}
+            </td>
+            <td className="bg-purple-400 bg-opacity-50 border-2 border-gray-800 p-1 md:p-2 px-3 md:px-5 rounded-full flex place-content-center">
+              <button onClick={() => deleteUser(curr._id)}>delete</button>
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>
+
       </div>
     </>
   );

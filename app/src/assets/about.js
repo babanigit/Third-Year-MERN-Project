@@ -9,3 +9,21 @@ export const aboutinstrument = {
 
     manu: " Shri Bhawani Musical Instruments & Manufacturer specializes in Manufacturing along with Teaching. Crafting Classical Indian drums such as Pakhwaj, Tabla, Dholak, and Dholki. Additionally, we offer repair services for other instruments as well. With a dedication to quality craftsmanship and musical education, we cater to musicians' needs with expertise and professionalism."
 }
+
+export const fessStructure =[
+    {
+        id:1,
+        remark:"at the time admission rs 1220 + rs 700",
+        fee: "rs 1920"
+    },
+    {
+        id:2,
+        remark:"monthly fees",
+        fee: "rs 700"
+    },
+    {
+        id:3,
+        remark:"yearly subscription",
+        fee: "rs 6000"
+    }
+]
