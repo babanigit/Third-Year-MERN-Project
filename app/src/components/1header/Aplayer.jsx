@@ -27,11 +27,9 @@ const Aplayer = (props) => {
     <>
       <div>
         <div>
-          <button
-          style={{ color:props.theme.text}}
-          onClick={playPause}>
+          <div style={{ color: props.theme.text }} onClick={playPause}>
             {props.tabla ? <div>pause</div> : <div>play</div>}
-          </button>
+          </div>
         </div>
       </div>
     </>

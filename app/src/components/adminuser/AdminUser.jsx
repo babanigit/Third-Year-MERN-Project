@@ -83,7 +83,7 @@ const AdminUser = () => {
             <tbody>
               {user.map((curr) => {
                 return (
-                  <tr className=" " key={curr.id}>
+                  <tr  key={curr.id} >
                     <td className="  bg-purple-400  bg-opacity-50 border-2  p-2 px-5 rounded-xl  ">
                       {" "}
                       {curr.username}{" "}

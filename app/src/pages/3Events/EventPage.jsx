@@ -15,7 +15,12 @@ const Gallery = (props) => {
         <div>
           <Page1 />
           <Page2Event />
+          <div>
+            <p 
+            className="w-full text-2xl font-bold flex place-content-center"
+            > About Location</p>
           <Page3Map />
+          </div>
         </div>
 
         <div>

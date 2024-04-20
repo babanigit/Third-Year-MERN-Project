@@ -17,7 +17,8 @@ const ShopePage = (props) => {
           <Page1 />
           
 
-          <div className=" bg-purple-300 m-4 rounded-2xl bg-opacity-50">
+          <div className=" bg--300 m-4 rounded-2xl bg-opacity-50">
+            <div  className="w-full text-2xl font-bold flex place-content-center"> Manufacture Location</div>
             <Page3Map />
           </div>
         </div>

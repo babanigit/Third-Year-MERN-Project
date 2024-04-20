@@ -7,7 +7,7 @@ import RS4 from "./RS/RS4";
 const Page2Event = () => {
   return (
     <>
-    <h1 className=" text-3xl flex place-content-center">Events</h1>
+    <h1  className="w-full text-2xl font-bold flex place-content-center">Events</h1>
       <div className=" p-4 min-h-screen  gap-4 grid">
         {eventBMI.map((p) => {
           var renderComponent;

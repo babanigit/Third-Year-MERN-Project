@@ -10,7 +10,7 @@ import tabla from "../../assets/pngs/tabla.png";
 import veena from "../../assets/pngs/veena.png";
 
 import tablareal1 from "../../assets/pngs/tablareal1.png";
-import pakhawajreal1 from "../../assets/pngs/pakhawajreal1.png";
+import pakhawajreal2 from "../../assets/pngs/pakhawajreal2.png";
 
 import { PortfolioData } from "../../assets/portfolio";
 import SocialMedia from "../../components/SocialMedia";
@@ -55,14 +55,15 @@ const Page1 = (props) => {
           <SocialMedia />
         </div>
 
-        <section 
-        style={{borderColor:props.theme.text}}
-        className=" bg-blue-200 rounded-3xl border-2  bg-opacity-50 grid grid-flow-col place-items-center h-[300px] w-full">
+        <section
+          style={{ borderColor: props.theme.text }}
+          className=" bg-blue-200 rounded-3xl border-2  bg-opacity-50 grid grid-flow-col place-items-center h-[300px] w-full"
+        >
           <div>
             <img
               className=" w-[300px] bg--300 hover:opacity-50 "
               onClick={() => setTrigg(true)}
-              src={pakhawajreal1}
+              src={pakhawajreal2}
             />
 
             <PopupPakhawaj
@@ -71,6 +72,10 @@ const Page1 = (props) => {
               trigg={trigg}
               theme={props.theme}
             >
+              <p className="w-full px-4 text-xl font-bold pt-4  ">
+                {" "}
+                About Pakhawaj :-
+              </p>
               <div
                 // style={{backgroundColor:theme.body}}
                 className=" h-full w-full p-4 text-xl  "
@@ -93,6 +98,11 @@ const Page1 = (props) => {
               trigg2={trigg2}
               theme={props.theme}
             >
+              <p className="w-full px-4 text-xl font-bold pt-4  ">
+                {" "}
+                About Tabla :-
+              </p>
+
               <div
                 // style={{backgroundColor:theme.body}}
                 className=" h-full w-full p-4 text-xl  "
