@@ -21,25 +21,23 @@ const userSchema = new Mongoose.Schema(
       default:
         "https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg",
     },
-    fullName: {
-      type: String,
-      required: true,
-      unique: true,
-      default: "default..."
-    },
+  
     contact: {
       type: String,
-      required: true,
-      default: "default..."
+      default: "default"
+    },
+    fullName: {
+      type: String,
+      default: "default",
+      // unique: true, // Define unique index for fullName
     },
     date: {
       type: String,
-      default: "default..."
-
+      default: "default"
     },
     instrument: {
       type: String,
-      default: "Tabla..."
+      default: "Tabla"
     },
     isAdmin: {
       type: Boolean,
