@@ -1,15 +1,27 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+
+import { useState } from "react";
 
 import bmi from "../../assets/pngs/ganesha.png";
 import tabla2 from "../../assets/pngs/tabla2.png";
 import tabla from "../../assets/pngs/tabla.png";
 import veena from "../../assets/pngs/veena.png";
 
+import tablareal1 from "../../assets/pngs/tablareal1.png";
+import pakhawajreal1 from "../../assets/pngs/pakhawajreal1.png";
+
 import { PortfolioData } from "../../assets/portfolio";
 import SocialMedia from "../../components/SocialMedia";
+import PopupPakhawaj from "./PopupPakhawaj";
+import { aboutinstrument } from "../../assets/about";
+import PopupTabla from "./PopupTabla";
 
-const Page1 = () => {
+const Page1 = (props) => {
+  const [trigg, setTrigg] = useState(false);
+  const [trigg2, setTrigg2] = useState(false);
+
   return (
     <>
       {/* <SocialMediaBar /> */}
@@ -26,11 +38,6 @@ const Page1 = () => {
           </div>
         </div>
 
-        {/* section 2 */}
-        <div className=" place-items-center grid p-5">
-          <SocialMedia />
-        </div>
-
         {/* section 3 */}
         <div className=" grid  grid-flow-col grid-cols-3 place-items-center  gap-3 p-4 ">
           <div className="  grid ">
@@ -41,6 +48,60 @@ const Page1 = () => {
             <div className="px-13  text-2xl">{PortfolioData.para2}</div>
           </div>
         </div>
+
+        {/* section 2 */}
+
+        <div className=" place-items-center grid p-5">
+          <SocialMedia />
+        </div>
+
+        <section 
+        style={{borderColor:props.theme.text}}
+        className=" bg-blue-200 rounded-3xl border-2  bg-opacity-50 grid grid-flow-col place-items-center h-[300px] w-full">
+          <div>
+            <img
+              className=" w-[300px] bg--300 hover:opacity-50 "
+              onClick={() => setTrigg(true)}
+              src={pakhawajreal1}
+            />
+
+            <PopupPakhawaj
+              trigger={trigg}
+              setTrigg={setTrigg}
+              trigg={trigg}
+              theme={props.theme}
+            >
+              <div
+                // style={{backgroundColor:theme.body}}
+                className=" h-full w-full p-4 text-xl  "
+              >
+                {aboutinstrument.pakhawaj}
+              </div>
+            </PopupPakhawaj>
+          </div>
+
+          <div>
+            <img
+              className=" w-[300px] bg--300 hover:opacity-50 "
+              onClick={() => setTrigg2(true)}
+              src={tablareal1}
+            />
+
+            <PopupTabla
+              trigger2={trigg2}
+              setTrigg2={setTrigg2}
+              trigg2={trigg2}
+              theme={props.theme}
+            >
+              <div
+                // style={{backgroundColor:theme.body}}
+                className=" h-full w-full p-4 text-xl  "
+              >
+                {aboutinstrument.tabla}
+              </div>
+            </PopupTabla>
+          </div>
+        </section>
 
         {/* section 4 */}
 

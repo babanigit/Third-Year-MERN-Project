@@ -134,7 +134,7 @@ function Header(props) {
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Shop
+            Manufacture
           </NavLink>
         </li>
 

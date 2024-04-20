@@ -5,9 +5,9 @@ const Page1 = () => {
   return (
     <>
     
-    <div className=" min-h-screen" >
+    <div className=" min-h-[200px]" >
 
-      shop 
+      hello manufacture 
     </div>
     </>
   )
