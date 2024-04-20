@@ -36,12 +36,12 @@ const AdminUser = () => {
     });
 
     const data = await res.json();
+
     console.log(`users after deleted: ${data}`);
 
     if (res.ok) {
-        getAllUserData();
+      getAllUserData();
     }
-
   };
 
   useEffect(() => {
@@ -51,58 +51,81 @@ const AdminUser = () => {
   return (
     <>
       <div className=" p-4">
-        <div className=" flex place-content-center text-xl">
+        <div className=" flex place-content-center text-xl font-bold">
           Admin user data
         </div>
 
         <div className="overflow-x-auto">
-  <table className="rounded-xl p-2 md:p-4 w-full">
-    <thead>
-      <tr className="bg-red-200">
-        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-          username
-        </th>
-        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-          email
-        </th>
-        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-          contact
-        </th>
-        <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-          instrument
-        </th>
-        {/* <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-          Delete
-        </th> */}
-      </tr>
-    </thead>
+          <table className="rounded-xl p-2 md:p-4 w-full">
+            <thead>
+              <tr className="bg-red-200">
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  username
+                </th>
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  email
+                </th>
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  full name
+                </th>
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  contact
+                </th>
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  instrument
+                </th>
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  Birth date
+                </th>
+                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                  created at
+                </th>
+              </tr>
+            </thead>
 
-    <tbody>
-      {user.map((curr) => {
-        return (
-          <tr key={curr.id}>
-            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-              {curr.username}
-            </td>
-            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-              {curr.email}
-            </td>
-            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-              {curr.contact}
-            </td>
-            <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-              {curr.instrument}
-            </td>
-            <td className="bg-purple-400 bg-opacity-50 border-2 border-gray-800 p-1 md:p-2 px-3 md:px-5 rounded-full flex place-content-center">
-              <button onClick={() => deleteUser(curr._id)}>delete</button>
-            </td>
-          </tr>
-        );
-      })}
-    </tbody>
-  </table>
-</div>
+            <tbody>
+              {user.map((curr) => {
+                return (
+                  <tr key={curr.id}>
+                    <td
+                      className={
+                        curr.isAdmin == true
+                          ? " bg-green-400  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1"
+                          : " bg-purple-400  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1"
+                      }
+                    >
+                      {curr.username} <p>{curr.isAdmin == true && "(admin)"}</p>
+                    </td>
+                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                      {curr.email}
+                    </td>
+                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                      {curr.fullName == "default" ? "-" : curr.fullName}
+                    </td>
+                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                      {curr.fullName == "default" ? "-" : curr.contact}
+                    </td>
+                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                      {curr.instrument}
+                    </td>
+                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                      {curr.date == "default" ? "-" : curr.date}
+                    </td>
+                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                      {curr.createdAt}
+                    </td>
 
+                    <td className="bg-purple-400 bg-opacity-50 border-2 border-gray-800 p-1 md:p-2 rounded-full flex place-content-center">
+                      <button onClick={() => deleteUser(curr._id)}>
+                        delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );

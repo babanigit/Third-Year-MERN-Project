@@ -14,20 +14,16 @@ export const updateUser = async (req, res, next) => {
       req.body.password = bcryptjs.hashSync(req.body.password, 10);
     }
 
-
-    var adminState =false
-    if(req.body.adminC){
-
-      if (req.body.adminC == "admin6920"){
-        adminState= true
-      }else{
-        adminState=false
-        throw createHttpError(401," invalid admin pass ")
+    var adminState = false;
+    if (req.body.adminC) {
+      if (req.body.adminC == "admin6920") {
+        adminState = true;
+      } else {
+        adminState = false;
+        throw createHttpError(401, " invalid admin pass ");
       }
-
     }
-   
-    
+
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
       {
@@ -36,7 +32,7 @@ export const updateUser = async (req, res, next) => {
           email: req.body.email,
           password: req.body.password,
           profilePicture: req.body.profilePicture,
-          isAdmin:adminState
+          isAdmin: adminState,
         },
       },
       { new: true }
@@ -85,7 +81,7 @@ export const admissionUpdate = async (req, res, next) => {
 
 export const adminFalse = async (req, res, next) => {
   try {
-    console.log("clicked on adminFalse")
+    console.log("clicked on adminFalse");
     // const {adminState}=req.body
     // const userCheck = await User.findById(req.params.id);
 
@@ -93,7 +89,7 @@ export const adminFalse = async (req, res, next) => {
       req.params.id,
       {
         $set: {
-          isAdmin:false
+          isAdmin: false,
         },
       },
       { new: true }
@@ -101,14 +97,10 @@ export const adminFalse = async (req, res, next) => {
 
     const { password, ...rest } = updatedUser._doc;
     res.status(200).json(rest);
-    
   } catch (error) {
-    next(error)
+    next(error);
   }
-
-}
-
-
+};
 
 // delete user
 export const deleteUser = async (req, res, next) => {
