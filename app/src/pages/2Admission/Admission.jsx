@@ -33,7 +33,7 @@ const Admission = (props) => {
     try {
       dispatch(updateUserStart());
 
-      console.log("current User ", currentUser)
+      console.log("current User ", currentUser);
 
       const res = await fetch(`/api/user/admission/${currentUser._id}`, {
         method: "POST",
@@ -64,12 +64,9 @@ const Admission = (props) => {
 
   return (
     <>
-      <div className=" grid place-items-center place-content-center h-full w-full gap-2 p-6">
-        <div className=" text-3xl m-3"> Admission Form </div>
-        <form
-          onSubmit={handleSubmit}
-          className=" w-[400px]  flex flex-col gap-4"
-        >
+      <div className=" grid place-items-center place-content-center h-full w-full gap-2 ">
+        <div className=" text-3xl "> Admission Form </div>
+        <form onSubmit={handleSubmit} className=" w-full flex flex-col gap-4">
           <input
             style={{
               background: props.theme.body,
@@ -79,7 +76,7 @@ const Admission = (props) => {
             type="fullName"
             placeholder="full name"
             id="fullName"
-            className=" text-black w-[400px]  bg-slate-100 p-3 rounded-lg border-2"
+            className=" text-black w-full  bg-slate-100 p-3 rounded-lg border-2"
             onChange={handleChange}
           />
           <input
@@ -91,7 +88,7 @@ const Admission = (props) => {
             type="contact"
             placeholder="Contact Number"
             id="contact"
-            className=" text-black w-[400px]  bg-slate-100 p-3 rounded-lg border-2"
+            className=" text-black w-full bg-slate-100 p-3 rounded-lg border-2"
             onChange={handleChange}
           />
 
@@ -134,7 +131,7 @@ const Admission = (props) => {
           <button
             style={{ background: props.theme.text, color: props.theme.body }}
             // disabled={loading}
-            className="  w-[400px]  bg-slate-700  p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+            className=" w-full bg-slate-700  p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
           >
             {false ? "Loading..." : "submit"}
           </button>

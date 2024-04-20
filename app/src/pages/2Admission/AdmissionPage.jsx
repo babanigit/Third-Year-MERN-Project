@@ -9,7 +9,7 @@ const UpdatesPage = (props) => {
     <>
     <div className=" min-h-screen" >
 
-      <div className="  w-full ">
+      <div className="  w-full fixed ">
         <Header theme={props.theme} />
       </div>
 
@@ -19,7 +19,7 @@ const UpdatesPage = (props) => {
         {/* <Page3Map /> */}
       </div>
 
-      <div className=" bottom-0  w-screen">
+      <div className=" bottom-0  w-screen fixed">
         <Footer theme={props.theme} />
       </div>
 

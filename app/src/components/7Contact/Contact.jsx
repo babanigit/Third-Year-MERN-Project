@@ -6,16 +6,17 @@ import SocialMedia from "../SocialMedia";
 const Contact = (props) => {
   return (
     <>
-      <div className=" h-full w-full grid grid-flow-col grid-cols-3 place-items-center p-3 bg-purple- bg-opacity-50 rounded-3xl   ">
-        <div className="  w-full grid place-items-end bg-opacity-45 rounded-full ">
-          <div className=" w-[30%]">
+      <div className=" w-full  grid grid-flow-col grid-cols-3 place-items-center p-3 bg-purple- bg-opacity-50 rounded-3xl   ">
+
+        <div className="  w-full h-auto grid place-items-center bg--200  bg-opacity-45 rounded-full ">
+          <div className=" w-[120px] ">
             <img src={kalasha} />
           </div>
         </div>
 
         <div
           style={{ borderColor: props.theme.text }}
-          className=" bg-green-300 bg-opacity-50  min-w-[600px] col-span-2 grid-rows-4 border-2 rounded-3xl  grid items-center p-[4] "
+          className=" bg-purple-300 bg-opacity-50  w-full max-w-[600px] col-span-2 grid-rows-4 border-2 rounded-3xl  grid items-center p-[4] "
         >
           {/* header */}
           <div className="  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
@@ -35,7 +36,7 @@ const Contact = (props) => {
                   borderColor: props.theme.text,
                 }}
                 placeholder="your email"
-                className=" px-[2%] rounded-lg border-2  border-white w-full "
+                className=" px-[2%] rounded-lg border-2  border-white w-full w-full "
               />
               <input
                 type="message"
@@ -44,11 +45,11 @@ const Contact = (props) => {
                   borderColor: props.theme.text,
                 }}
                 placeholder="message"
-                className=" h-[100px]  px-[2%]  rounded-lg border-2  border-white w-full "
+                className=" h-[100px]  px-[2%]  rounded-lg border-2  border-white  w-full "
               />
               <button
                 style={{ borderColor: props.theme.text }}
-                className=" w-[20%]  grid border border-5 rounded-md "
+                className=" w-[20%] grid border border-5 rounded-md "
               >
                 send
               </button>{" "}

@@ -5,7 +5,7 @@ const Page3Map = () => {
   return (
     <div className=" grid  min-h-[500px] p-4 ">
       <div className="  grid grid-flow-col grid-cols-3">
-        <div className=" col-span-2 grid bg-pink- bg-opacity-50 rounded-3xl place-items-center ">
+        <div className=" col-span-2 grid bg-blue-300 p-5 bg-opacity-50 rounded-3xl place-items-center ">
           <IFrame />
         </div>
         <div className="grid  place-items-center place-content-center">

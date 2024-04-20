@@ -10,7 +10,7 @@ import tabla from "../../assets/pngs/tabla.png";
 import veena from "../../assets/pngs/veena.png";
 
 import tablareal1 from "../../assets/pngs/tablareal1.png";
-import pakhawajreal2 from "../../assets/pngs/pakhawajreal2.png";
+import pakhawaj3 from "../../assets/pngs/pakhawaj3.png";
 
 import { PortfolioData } from "../../assets/portfolio";
 import SocialMedia from "../../components/SocialMedia";
@@ -60,11 +60,19 @@ const Page1 = (props) => {
           className=" bg-blue-200 rounded-3xl border-2  bg-opacity-50 grid grid-flow-col place-items-center h-[300px] w-full"
         >
           <div>
+            <div>
             <img
               className=" w-[300px] bg--300 hover:opacity-50 "
               onClick={() => setTrigg(true)}
-              src={pakhawajreal2}
+              src={pakhawaj3}
             />
+
+            <p
+            className="w-full text-2xl font-bold flex place-content-center"
+            > Pakahwaj</p>
+
+            </div>
+            
 
             <PopupPakhawaj
               trigger={trigg}
@@ -86,11 +94,19 @@ const Page1 = (props) => {
           </div>
 
           <div>
+          
+            <div>
             <img
               className=" w-[300px] bg--300 hover:opacity-50 "
               onClick={() => setTrigg2(true)}
               src={tablareal1}
             />
+
+<p
+            className="w-full text-2xl font-bold flex place-content-center"
+            > Tabla</p>
+
+            </div>
 
             <PopupTabla
               trigger2={trigg2}

@@ -22,7 +22,7 @@ const PopupTabla = (props) => {
 
               <div
                 style={{ borderColor: props.theme.text }}
-                className=" w-full h-full row-span-11  bg-blue-300 bg-opacity-50 rounded-xl "
+                className=" w-full h-full row-span-11  bg-yellow-200 bg-opacity-50 rounded-xl "
               >
                 {props.children}
               </div>

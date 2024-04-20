@@ -9,17 +9,17 @@ import { useSelector } from "react-redux";
 
 import kumkuma from "../../assets/pngs/kumkuma.png";
 
-import Contact from "../../components/7Contact/Contact";
+// import Contact from "../../components/7Contact/Contact";
 
 const Page1 = (props) => {
   const { currentUser } = useSelector((state) => state.user);
 
   return (
     <>
-      <div className=" p-4 grid gap-2">
-        <div className=" grid place-items-center min-h-auto grid-flow-col grid-cols-3 p-4 bg-green- bg-opacity-50 rounded-3xl  ">
+      <div className=" p-4 grid gap-2 h-screen">
+        <div className=" grid place-items-center  grid-flow-col grid-cols-3 p-4 bg-green- bg-opacity-50 rounded-3xl  ">
           <div
-            className=" h-fit p-3 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50 col-span-2 "
+            className="  w-fit  p-7 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50 col-span-2 "
             style={{
               // background: props.theme.body,
               // color: props.theme.text,
@@ -31,26 +31,25 @@ const Page1 = (props) => {
             </div>
 
             {true ? (
-              <Admission theme={props.theme} />
+              <div className=" w-full">
+                <Admission theme={props.theme} />
+              </div>
             ) : (
               <>
-                <div className=" h-full w-full grid place-content-center place-items-center text-xl p-3">
+                <div className=" h-auto w-full grid place-content-center place-items-center text-xl p-3">
                   <div> Login to get Admission form </div>
                 </div>
               </>
             )}
           </div>
-          <div className="  w-full grid place-items-start  bg-opacity-45 rounded-full ">
-            <div className=" w-[30%]">
+          <div className="  w-full grid place-items-center  bg-opacity-45 rounded-full ">
+            <div className=" w-[150px]">
               <img src={kumkuma} />
             </div>
           </div>
         </div>
 
-
-        <Contact theme={props.theme} />
-
- 
+        {/* <Contact theme={props.theme} /> */}
       </div>
     </>
   );

@@ -13,7 +13,12 @@ const Gallery = (props) => {
           <Header theme={props.theme} setTheme={props.setTheme} />
         </div>
         <div>
+          <div>
+          {/* <p 
+            className="w-full text-2xl font-bold flex place-content-center"
+            > About Sir</p> */}
           <Page1 />
+          </div>
           <Page2Event />
           <div>
             <p 
