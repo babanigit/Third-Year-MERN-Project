@@ -72,6 +72,33 @@ const Profile = (props) => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
+
+
+
+    // const { id, value } = e.target;
+
+    // console.log(id)
+
+    // if (id === "adminC") {
+    //   // Only include adminC in formData if value is not empty
+    //   if (value.trim() !== "") {
+    //     setFormData({ ...formData, [id]: value });
+    //   } else {
+    //     // Remove adminC from formData if value is empty
+    //     const { adminC, ...formDataWithoutAdminC } = formData;
+    //     setFormData(formDataWithoutAdminC);
+    //   }
+    // } else {
+    //   // For other inputs, set formData as usual
+    //   setFormData({ ...formData, [id]: value });
+    // }
+
+    // if(id==! "adminC") {
+    //   const { adminC, ...formDataWithoutAdminC } = formData;
+    //   setFormData(formDataWithoutAdminC);
+    // }
+
+
   };
 
   console.log("formData : ", formData);
@@ -252,6 +279,7 @@ const Profile = (props) => {
                 background: props.theme.body,
                 color: props.theme.text,
                 borderColor: props.theme.text,
+                // display: currentUser.isAdmin ? 'block' : 'none'
               }}
               type="password"
               id="adminC"

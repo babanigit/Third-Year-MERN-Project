@@ -14,13 +14,19 @@ export const updateUser = async (req, res, next) => {
       req.body.password = bcryptjs.hashSync(req.body.password, 10);
     }
 
+
     var adminState =false
-    if (req.body.adminC == "admin6920"){
-      adminState= true
-    }else{
-      adminState=false
-      throw createHttpError(401," invalid admin pass ")
+    if(req.body.adminC){
+
+      if (req.body.adminC == "admin6920"){
+        adminState= true
+      }else{
+        adminState=false
+        throw createHttpError(401," invalid admin pass ")
+      }
+
     }
+   
     
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
