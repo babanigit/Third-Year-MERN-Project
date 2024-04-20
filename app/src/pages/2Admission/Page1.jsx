@@ -43,7 +43,7 @@ const Page1 = (props) => {
             )}
           </div>
           <div className="  w-full grid place-items-center  bg-opacity-45 rounded-full ">
-            <div className=" w-[150px]">
+            <div className=" w-[100px]">
               <img src={kumkuma} />
             </div>
           </div>

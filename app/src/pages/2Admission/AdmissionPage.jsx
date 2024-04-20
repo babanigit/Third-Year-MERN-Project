@@ -9,7 +9,7 @@ const UpdatesPage = (props) => {
     <>
     <div className=" min-h-screen" >
 
-      <div className="  w-full fixed ">
+      <div className="  w-full  ">
         <Header theme={props.theme} />
       </div>
 

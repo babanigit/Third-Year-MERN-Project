@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
+import woman from "../../assets/pngs/woman.png";
+
 import {
   signInStart,
   signInSuccess,
@@ -60,8 +62,14 @@ const SignIn = (props) => {
         style={{ background: props.theme.body, color: props.theme.text }}
         className=" max-w-lg m-auto h-screen grid place-content-center "
       >
-        <div className="  max-w-lg mx-auto   w-screen">
-          <h1 className="text-3xl text-center font-semibold ">Sign In</h1>
+        <div className="  max-w-lg mx-auto   w-screen grid gap-3 ">
+          <div className=" flex place-content-center place-items-center">
+            <div>
+              <img className=" w-12" src={woman} alt="women" />
+            </div>
+
+            <h1 className="text-3xl text-center font-semibold ">Sign In</h1>
+          </div>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
               style={{
