@@ -287,7 +287,11 @@ const Profile = (props) => {
               type="password"
               id="adminC"
               placeholder="become admin (enter the valid pass)"
-              className="bg-slate-100 rounded-lg p-3 border-2 "
+              
+              className={
+                currentUser.isAdmin
+                ? "hidden bg-slate-100 rounded-lg p-3 border-2 "
+                :"bg-slate-100 rounded-lg p-3 border-2 "}
               onChange={handleChange}
             />
             <button

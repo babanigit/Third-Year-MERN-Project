@@ -1,22 +1,23 @@
 /* eslint-disable react/prop-types */
 
-import kalasha from "../../assets/pngs/kalasha.png"
+// import kalasha from "../../assets/pngs/kalasha.png"
 import SocialMedia from "../SocialMedia";
 
 const Contact = (props) => {
   return (
     <>
-      <div className=" w-full  grid grid-flow-col grid-cols-3 place-items-center p-3 bg-purple- bg-opacity-50 rounded-3xl   ">
+      <div className=" w-full  grid grid-flow-col grid-cols-2 place-items-center p-3 bg-purple- bg-opacity-50 rounded-3xl   ">
 
-        <div className="  w-full h-auto grid place-items-center bg--200  bg-opacity-45 rounded-full ">
-          <div className=" w-[120px] ">
+        <div className="  w-full h-auto grid place-items-center bg--200  bg-opacity-45 rounded-full  ">
+          {/* <div className=" w-[120px] ">
             <img src={kalasha} />
-          </div>
+          </div> */}
+           <SocialMedia />
         </div>
 
         <div
           style={{ borderColor: props.theme.text }}
-          className=" bg-purple-300 bg-opacity-50  w-full max-w-[600px] col-span-2 grid-rows-4 border-2 rounded-3xl  grid items-center p-[4] "
+          className=" bg-purple-300 bg-opacity-50  w-full max-w-[600px]  grid-rows-4 border-2 rounded-3xl  grid items-center p-[4] "
         >
           {/* header */}
           <div className="  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
@@ -55,7 +56,7 @@ const Contact = (props) => {
               </button>{" "}
             </form>
             <div className=" flex w-full place-items-center place-content-center">
-              <SocialMedia />
+             
             </div>
           </div>
         </div>

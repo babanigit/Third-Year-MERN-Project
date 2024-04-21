@@ -62,14 +62,14 @@ export const eventBMI = [
     bg: "bg-blue-300",
 
     content:
-      "In 2023, the Swami Samarth rally unfolded as a deeply reverential homage to the revered spiritual figure Swami Samarth Maharaj. The event was a vibrant manifestation of devotion and reverence, drawing devotees from far and wide to honor the divine presence of Swami Samarth Maharaj.The rally commenced with solemn prayers and invocations, setting a sacred tone for the journey ahead. Participants, adorned in traditional attire, embarked on a spiritual pilgrimage, chanting the divine name of Swami Samarth and reciting sacred verses along the designated route. The air resonated with the melodious strains of devotional songs and hymns, echoing the timeless teachings and blessings of Swami Samarth Maharaj.",
+      "In 2023, the Swami Samarth rally unfolded as a deeply reverential homage to the revered spiritual figure Swami Samarth Maharaj. The event was a vibrant manifestation of devotion and reverence, drawing devotees from far and wide to honor the divine presence of Swami Samarth Maharaj.The rally commenced with solemn prayers and invocations, setting a sacred tone for the journey ahead. Participants, adorned in traditional attire, embarked on a spiritual pilgrimage, chanting the divine name of Swami Samarth and reciting sacred verses along the designated route. ",
   },
   {
     id: 4,
     bg: "bg-yellow-300",
 
     content:
-      "In the previous year, 2023, we observed Gurupoojan, an esteemed annual occasion dedicated to honoring Guru Purnima, a celebration that reveres the wisdom and teachings bestowed upon us by our revered mentors. The event commenced with the sacred Ganesh poojan, invoking blessings for a prosperous journey ahead. Following this auspicious beginning, students showcased their talents through soulful solo performances on traditional instruments like the Pakhwaj, Tabla, and Dholki. These musical renditions were accompanied by heartfelt devotional 'Bhajans', filling the atmosphere with spiritual resonance and devotion. As the event reached its culmination, the revered teacher graced the audience with a mesmerizing instrumental performance, captivating hearts before imparting an inspiring speech, fostering a deeper understanding of the profound impact of mentorship and the eternal pursuit of knowledge. Gurupoojan stands as a poignant testament to the enduring legacy of mentorship and the transformative power of learning.",
+      "In the previous year, 2023, we observed Gurupoojan, an esteemed annual occasion dedicated to honoring Guru Purnima, a celebration that reveres the wisdom and teachings bestowed upon us by our revered mentors. The event commenced with the sacred Ganesh poojan, invoking blessings for a prosperous journey ahead. Following this auspicious beginning, students showcased their talents through soulful solo performances on traditional instruments like the Pakhwaj, Tabla, and Dholki.",
   },
 ];
 
@@ -142,16 +142,16 @@ export const rs4 = [
 ];
 
 export const PortfolioData = {
-  para: "Shree Bhawani Musical Instrument and Classes is a distinguished institution dedicated to the preservation and dissemination of Indian classical music traditions. We specialize in providing comprehensive training in instruments like Pakhawaj, Tabla, and others, imparting both theoretical knowledge and practical skills to our students.",
+  para: "Shri Bhawani Musical Instruments & Manufacturer is a prestigious musical academy dedicated to the teaching and craftsmanship of traditional Indian percussion instruments such as Pakhwaj, Tabla, Dholki, and Dholak. Established in 2007 by the esteemed percussionist Mr. Mangesh Chadrakant Patole, who also serves as the principal instructor, this academy stands as a beacon of excellence in the realm of classical Indian music.",
 
   para2:
-    "At Shree Bhawani, we take pride in offering expert guidance from seasoned musicians and educators who are passionate about nurturing talent and instilling a deep appreciation for the rich heritage of Indian classical music. Our curriculum is meticulously designed to cater to students of all skill levels, from beginners to advanced learners.",
+    "At Shri Bhawani Musical Instruments & Manufacturer, students embark on a journey from the fundamentals of their chosen instrument to the mastery of performance. Beyond instruction, the academy also specializes in the manufacturing of classical Indian drums, ensuring the highest quality instruments for both learning and professional use.",
 
   para3:
-    "In addition to our educational endeavors, we also boast a state-of-the-art manufacturing facility where we handcraft high-quality Pakhawaj and Tabla instruments. Each instrument is crafted with precision and care, using traditional techniques passed down through generations, ensuring exceptional sound quality and durability.",
+    "In addition With a curriculum designed to nurture talent and foster skill development, students are equipped not only to become proficient percussionists but also to excel in the rigorous examinations conducted annually by the renowned 'Akhil Bharatiya Gandharv Mahavidyala'. This esteemed institution is dedicated to the promotion and preservation of Indian classical music and dance, offering recognition to those who demonstrate exceptional proficiency.",
 
   para4:
-    "Whether you aspire to master a musical instrument or acquire an exquisite instrument for your performances, Shree Bhawani Musical Instrument and Classes is your premier destination. Join us on a journey of musical discovery and excellence.",
+    "Whether aspiring to master an instrument or seeking to acquire one of superior craftsmanship, Shri Bhawani Musical Instruments & Manufacturer stands as the premier destination. With its comprehensive approach to education and dedication to excellence, it prepares individuals to embark on a journey towards musical mastery and recognition.",
 };
 
 const socialMediaLinks = {

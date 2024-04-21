@@ -74,7 +74,7 @@ const Page1 = (props) => {
 
               <p className="w-full text-2xl font-bold flex place-content-center">
                 {" "}
-                Pakahwaj
+                Pakhwaj
               </p>
             </div>
 
@@ -86,7 +86,7 @@ const Page1 = (props) => {
             >
               <p className="w-full px-4 text-xl font-bold pt-4  ">
                 {" "}
-                About Pakhawaj :-
+                About Pakhwaj :-
               </p>
               <div
                 // style={{backgroundColor:theme.body}}

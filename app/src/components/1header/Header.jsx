@@ -10,8 +10,9 @@ import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import { style } from "glamor";
 
-import { IoMdLogIn } from "react-icons/io";
-import { TbLogin } from "react-icons/tb";
+
+import { FaSignInAlt } from "react-icons/fa";
+
 
 
 import Aplayer from "./Aplayer.jsx";
@@ -187,7 +188,7 @@ function Header(props) {
             ) : (
               <div>
 
-                <li className=""><TbLogin size={30} /></li>
+                <li className=""><FaSignInAlt size={30} /></li>
               </div>
             )}
           </Link>
