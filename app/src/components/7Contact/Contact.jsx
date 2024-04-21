@@ -46,17 +46,28 @@ const Contact = (props) => {
   return (
     <>
       <div className=" w-full h-auto grid grid-flow-col grid-cols-2 place-items-center p-3 bg-purple- bg-opacity-50 rounded-3xl   ">
-        <div className="  w-full  grid place-items-center bg--200  bg-opacity-45 rounded-full  ">
-          {/* <div className=" w-[120px] ">
-            <img src={kalasha} />
-          </div> */}
+        <div className="  w-full max-w-[600px] border-2 rounded-3xl grid place-items-center bg--200  bg-opacity-50 bg-pink-300 hover:bg-pink-400 h-full place-content-center gap-4  ">
           
+
+          <div className=" font-bold text-xl">
+          mangeshpatole639@gmail.com 
+          </div>
+          <div>
+          8446383926 / 9594537259
+          </div>
+          
+          <div>
+
           <SocialMedia />
+          </div>
+          <div className="w-[60%] text-center font-extrabold ">
+          Hanuman Mandir, Nalasopara Rd, Moregaon, Oswal Nagari, Nalasopara East, Virar, Nala Sopara, Maharashtra 401203
+          </div>
         </div>
 
         <div
           style={{ borderColor: props.theme.text }}
-          className=" bg-pink-300 bg-opacity-50  w-full max-w-[600px] h-auto border-2 rounded-3xl  grid items-center p-4 "
+          className=" bg-pink-300 hover:bg-pink-400 bg-opacity-50  w-full max-w-[600px] h-auto border-2 rounded-3xl  grid items-center p-4 "
         >
           <div className="  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
             Contact us
