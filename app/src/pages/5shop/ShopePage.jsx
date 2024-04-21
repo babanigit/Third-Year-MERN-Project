@@ -26,7 +26,7 @@ const ShopePage = (props) => {
             <Page3Map />
           </div>
 
-          <div>
+          <div className=" p-4">
 
             <Contact theme={props.theme} />
           </div>

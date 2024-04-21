@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { GrUserAdmin } from "react-icons/gr";
 
-
-
 const AdminUser = () => {
   const [user, setUser] = useState([]);
 
@@ -90,16 +88,31 @@ const AdminUser = () => {
 
             <tbody>
               {user.map((curr) => {
+
+                // converting date into readable date
+                const date = new Date(curr.createdAt); // Create a new Date object from the MongoDB date string
+                const options = {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  second: "numeric",
+                  timeZoneName: "short",
+                }; // Format the date to a readable format
+                const formattedDate = date.toLocaleDateString("en-US", options);
+
                 return (
                   <tr key={curr.id}>
                     <td
                       className={
                         curr.isAdmin == true
-                          ? " bg-green-300  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1 place-items-center"
-                          : " bg-purple-300  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1"
+                          ? " bg-green-300  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex  place-items-center"
+                          : " bg-purple-300  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex  place-items-center"
                       }
                     >
-                      {curr.username} <p>{curr.isAdmin == true && <GrUserAdmin />}</p>
+                      {curr.username}{" "}
+                      <p>{curr.isAdmin == true && <GrUserAdmin />}</p>
                     </td>
                     <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.email}
@@ -117,14 +130,15 @@ const AdminUser = () => {
                       {curr.date == "default" ? "-" : curr.date}
                     </td>
                     <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
-                      {curr.createdAt}
+                      {formattedDate}
                     </td>
 
                     <td className="bg-pink-400 bg-opacity-50 border-2 border-gray-800 p-1 md:p-2 rounded-full flex place-content-center">
                       <button
-                      className=" flex place-items-center"
-                       onClick={() => deleteUser(curr._id)}>
-                         <MdDelete />
+                        className=" flex place-items-center"
+                        onClick={() => deleteUser(curr._id)}
+                      >
+                        <MdDelete />
                       </button>
                     </td>
                   </tr>

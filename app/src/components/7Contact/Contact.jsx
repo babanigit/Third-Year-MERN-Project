@@ -45,8 +45,8 @@ const Contact = (props) => {
 
   return (
     <>
-      <div className=" w-full h-auto grid grid-flow-col grid-cols-2 place-items-center p-3 bg-purple- bg-opacity-50 rounded-3xl   ">
-        <div className="  w-full max-w-[600px] border-2 rounded-3xl grid place-items-center bg--200  bg-opacity-50 bg-pink-300 hover:bg-pink-400 h-full place-content-center gap-4  ">
+      <div className=" w-full h-auto grid grid-flow-col grid-cols-2 place-items-center p-3  bg-opacity-50 rounded-3xl bg-pink-300   ">
+        <div className="  w-full max-w-[600px]  rounded-3xl grid place-items-center   bg-opacity-50  h-full place-content-center gap-4  ">
           
 
           <div className=" font-bold text-xl">
@@ -67,11 +67,11 @@ const Contact = (props) => {
 
         <div
           style={{ borderColor: props.theme.text }}
-          className=" bg-pink-300 hover:bg-pink-400 bg-opacity-50  w-full max-w-[600px] h-auto border-2 rounded-3xl  grid items-center p-4 "
+          className=" bg-opacity-50  w-full max-w-[600px] h-auto  rounded-3xl  grid items-center p-4 "
         >
-          <div className="  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
+          {/* <div className="  text-3xl grid grid-flow-col justify-center gap-3  items-center  row-span-1 ">
             Contact us
-          </div>
+          </div> */}
 
           <form
             // action=""
@@ -89,7 +89,7 @@ const Contact = (props) => {
                 borderColor: props.theme.text,
               }}
               placeholder="NAME"
-              className="  p-3 rounded-lg border-2  border-white w-full "
+              className="  p-2 rounded-lg border-2  border-white w-full "
             />
             <input
               onChange={handleChange}
@@ -101,7 +101,7 @@ const Contact = (props) => {
                 borderColor: props.theme.text,
               }}
               placeholder="EMAIL"
-              className=" p-3 rounded-lg border-2  border-white w-full "
+              className=" p-2 rounded-lg border-2  border-white w-full "
             />
             <input
               onChange={handleChange}
@@ -113,19 +113,19 @@ const Contact = (props) => {
                 borderColor: props.theme.text,
               }}
               placeholder="MESSAGE"
-              className=" h-[100px]  p-3 rounded-lg border-2  border-white  w-full "
+              className=" h-[100px]  p-2 rounded-lg border-2  border-white  w-full "
             />
             <button
               style={{ borderColor: props.theme.text }}
-              className=" p-3 rounded-lg border-2  border-white w-full "
+              className=" p-2 rounded-lg border-2  border-white w-full hover:bg-pink-400 "
             >
-              send
+              Send Email
             </button>{" "}
             <p
               style={{ color: props.theme.text }}
               className={
                 state &&
-                " bg-green-500 bg-opacity-50 mt-5 rounded-md p-3 w-full"
+                " bg-green-500 bg-opacity-50 mt-5 rounded-md p-1 px-3 w-full"
               }
             >
               {state && "Email send successfully "}
@@ -134,10 +134,10 @@ const Contact = (props) => {
               style={{ color: props.theme.text }}
               className={
                 errorState &&
-                " bg-red-500 bg-opacity-50 mt-5 rounded-md p-3 w-full"
+                " bg-red-500 bg-opacity-50 mt-5 rounded-md p-1 px-3 w-full"
               }
             >
-              {errorState && " null data "}
+              {errorState && " fill all the data "}
             </p>
           </form>
         </div>
