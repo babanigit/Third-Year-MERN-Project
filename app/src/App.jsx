@@ -8,7 +8,7 @@ import { themes } from "./assets/theme";
 export const MyContext = createContext(() => {});
 
 function App() {
-  const [themeMode, setThemeMode] = useState("light");
+  const [themeMode, setThemeMode] = useState("dark");
   const [tablaMode, setTablaMode] = useState(false);
   console.log(tablaMode);
 

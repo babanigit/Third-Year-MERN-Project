@@ -2,6 +2,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
+import { MdDeleteForever } from "react-icons/md";
+import { RiAdminFill } from "react-icons/ri";
+
 import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
@@ -310,7 +313,7 @@ const Profile = (props) => {
                     className="cursor-pointer border-2 p-2 rounded-md border-blue-500 "
                     to="/admin"
                   >
-                    <span className="text-blue-500">Admin </span>
+                    <span className="text-blue-500 flex place-items-center ">Admin <RiAdminFill /> </span>
                   </Link>
 
                   <Link
@@ -318,10 +321,10 @@ const Profile = (props) => {
                     // to="/admin"
                   >
                     <span
-                      className="text-red-500"
+                      className="text-red-500 flex place-items-center"
                       onClick={() => adminRemove()}
                     >
-                      remove as admin
+                      Admin <MdDeleteForever />
                     </span>
                   </Link>
                 </>

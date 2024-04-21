@@ -25,18 +25,20 @@ const ShopRenderSlider = () => {
               className=" w-[700px] grid place-items-center rounded-3xl "
             />
           </div> */}
-          <div>
-            <img
-              src={sir2}
-              //   style={contentStyle}
-              className=" w-[700px] grid place-items-center rounded-3xl "
-            />
-          </div>
+        
           <div>
             <img
               src={sir3}
               //   style={contentStyle}
               className=" w-[700px] p-13  place-items-center  rounded-3xl "
+            />
+          </div>
+
+          <div>
+            <img
+              src={sir2}
+              //   style={contentStyle}
+              className=" w-[700px] grid place-items-center rounded-3xl "
             />
           </div>
         </Carousel>

@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 
+import { MdDelete } from "react-icons/md";
+import { GrUserAdmin } from "react-icons/gr";
+
+
+
 const AdminUser = () => {
   const [user, setUser] = useState([]);
 
@@ -50,34 +55,34 @@ const AdminUser = () => {
 
   return (
     <>
-      <div className=" p-4">
+      <div className=" p-4 min-h-screen h-auto">
         <div className=" flex place-content-center text-xl font-bold">
-          Admin user data
+          USER DATA
         </div>
 
         <div className="overflow-x-auto">
           <table className="rounded-xl p-2 md:p-4 w-full">
             <thead>
-              <tr className="bg-red-200">
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+              <tr className="">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   username
                 </th>
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   email
                 </th>
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   full name
                 </th>
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   contact
                 </th>
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   instrument
                 </th>
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   Birth date
                 </th>
-                <th className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                   created at
                 </th>
               </tr>
@@ -90,34 +95,36 @@ const AdminUser = () => {
                     <td
                       className={
                         curr.isAdmin == true
-                          ? " bg-green-400  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1"
-                          : " bg-purple-400  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1"
+                          ? " bg-green-300  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1 place-items-center"
+                          : " bg-purple-300  bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl flex gap-1"
                       }
                     >
-                      {curr.username} <p>{curr.isAdmin == true && "(admin)"}</p>
+                      {curr.username} <p>{curr.isAdmin == true && <GrUserAdmin />}</p>
                     </td>
-                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                    <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.email}
                     </td>
-                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                    <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.fullName == "default" ? "-" : curr.fullName}
                     </td>
-                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                    <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.fullName == "default" ? "-" : curr.contact}
                     </td>
-                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                    <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.instrument}
                     </td>
-                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                    <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.date == "default" ? "-" : curr.date}
                     </td>
-                    <td className="bg-purple-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
+                    <td className="bg-purple-300 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">
                       {curr.createdAt}
                     </td>
 
-                    <td className="bg-purple-400 bg-opacity-50 border-2 border-gray-800 p-1 md:p-2 rounded-full flex place-content-center">
-                      <button onClick={() => deleteUser(curr._id)}>
-                        delete
+                    <td className="bg-pink-400 bg-opacity-50 border-2 border-gray-800 p-1 md:p-2 rounded-full flex place-content-center">
+                      <button
+                      className=" flex place-items-center"
+                       onClick={() => deleteUser(curr._id)}>
+                         <MdDelete />
                       </button>
                     </td>
                   </tr>

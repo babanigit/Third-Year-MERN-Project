@@ -58,26 +58,18 @@ const Main = (props) => {
 
             {/* private */}
             <Route element={<PrivateRoute />}>
-
               <Route
                 path="/profile"
                 element={<ProfilePage theme={props.theme} />}
               />
-
-             
             </Route>
 
             <Route element={<PrivateRoute2 />}>
-
-  {/* admin */}
-  <Route path="/admin" element={<AdminPage theme={props.theme} />}>
+              {/* admin */}
+              <Route path="/admin" element={<AdminPage theme={props.theme} />}>
                 <Route path="users" element={<AdminUser />} />
-
               </Route>
-
-             
             </Route>
-
           </Routes>
 
           {/* <Footer theme={props.theme} /> */}

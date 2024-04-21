@@ -21,6 +21,8 @@ const AdminPage = (props) => {
 
       </div>
 
+      
+
       {/* <div className=" bottom-0 w-screen">
         <Footer theme={props.theme} />
       </div> */}

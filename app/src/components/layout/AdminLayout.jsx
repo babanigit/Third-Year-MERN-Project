@@ -7,6 +7,9 @@ import { FaHome } from "react-icons/fa";
 const AdminLayout = () => {
   return (
     <>
+    <div className=" p-4 min-h-screen h-auto">
+
+
       <header>
         <div>
           <nav>
@@ -33,7 +36,11 @@ const AdminLayout = () => {
         </div>
       </header>
 
-      <Outlet />
+    
+
+      <Outlet /> 
+      
+         </div>
     </>
   );
 };

@@ -2,6 +2,11 @@
 import { useState, useRef } from "react";
 import AudioFile from "./tabla.mp3";
 
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa";
+
+
+
 const Aplayer = (props) => {
   const audioSong = useRef(new Audio(AudioFile));
 
@@ -28,7 +33,7 @@ const Aplayer = (props) => {
       <div>
         <div>
           <div style={{ color: props.theme.text }} onClick={playPause}>
-            {props.tabla ? <div>pause</div> : <div>play</div>}
+            {props.tabla ? <div><FaPause /></div> : <div><FaPlay /></div>}
           </div>
         </div>
       </div>

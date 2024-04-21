@@ -13,17 +13,17 @@ export const aboutinstrument = {
 export const fessStructure =[
     {
         id:1,
-        remark:"at the time admission rs 1220 + rs 700",
-        fee: "rs 1920"
+        remark:"At the time Admission RS 1220 + RS 700",
+        fee: "RS 1920"
     },
     {
         id:2,
-        remark:"monthly fees",
-        fee: "rs 700"
+        remark:"Monthly fees",
+        fee: "RS 700"
     },
     {
         id:3,
-        remark:"yearly subscription",
-        fee: "rs 6000"
+        remark:"Yearly subscription",
+        fee: "RS 6000"
     }
 ]

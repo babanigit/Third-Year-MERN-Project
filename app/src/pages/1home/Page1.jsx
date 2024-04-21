@@ -12,15 +12,19 @@ import veena from "../../assets/pngs/veena.png";
 import tablareal1 from "../../assets/pngs/tablareal1.png";
 import pakhawaj3 from "../../assets/pngs/pakhawaj3.png";
 
+import sheet from "../../assets/pngs/sheet.png";
+
 import { PortfolioData } from "../../assets/portfolio";
 import SocialMedia from "../../components/SocialMedia";
 import PopupPakhawaj from "./PopupPakhawaj";
 import { aboutinstrument } from "../../assets/about";
 import PopupTabla from "./PopupTabla";
+import PopupSheet from "./PopupSheet";
 
 const Page1 = (props) => {
   const [trigg, setTrigg] = useState(false);
   const [trigg2, setTrigg2] = useState(false);
+  const [trigg3, setTrigg3] = useState(false);
 
   return (
     <>
@@ -59,20 +63,20 @@ const Page1 = (props) => {
           style={{ borderColor: props.theme.text }}
           className=" bg-blue-200 rounded-3xl border-2  bg-opacity-50 grid grid-flow-col place-items-center h-[300px] w-full"
         >
+          {/* pakhawaj */}
           <div>
             <div>
-            <img
-              className=" w-[300px] bg--300 hover:opacity-50 "
-              onClick={() => setTrigg(true)}
-              src={pakhawaj3}
-            />
+              <img
+                className=" max-w-[300px] bg--300 hover:opacity-50 "
+                onClick={() => setTrigg(true)}
+                src={pakhawaj3}
+              />
 
-            <p
-            className="w-full text-2xl font-bold flex place-content-center"
-            > Pakahwaj</p>
-
+              <p className="w-full text-2xl font-bold flex place-content-center">
+                {" "}
+                Pakahwaj
+              </p>
             </div>
-            
 
             <PopupPakhawaj
               trigger={trigg}
@@ -93,19 +97,65 @@ const Page1 = (props) => {
             </PopupPakhawaj>
           </div>
 
+          {/* sheet */}
           <div>
-          
             <div>
-            <img
-              className=" w-[300px] bg--300 hover:opacity-50 "
-              onClick={() => setTrigg2(true)}
-              src={tablareal1}
-            />
+              <img
+                className=" max-w-[150px] bg--300 hover:opacity-50 rounded-md "
+                onClick={() => setTrigg3(true)}
+                src={sheet}
+              />
 
-<p
-            className="w-full text-2xl font-bold flex place-content-center"
-            > Tabla</p>
+              {/* <p className="w-full text-2xl font-bold flex place-content-center">
+                {" "}
+                Sheet
+              </p> */}
 
+            </div>
+
+            <PopupSheet
+              trigger3={trigg3}
+              setTrigg3={setTrigg3}
+              trigg3={trigg3}
+              theme={props.theme}
+            >
+              {/* <p className="w-full px-4 text-xl font-bold pt-4  ">
+                {" "}
+                About Sheet :-
+              </p> */}
+
+              <div
+                // style={{backgroundColor:theme.body}}
+                className=" h-full w-full p-4 text-xl  "
+              >
+
+                <div className=" flex place-content-center items-center">
+                <img
+                  className=" max-w-[360px] rounded-md flex justify-center items-center"
+                  src={sheet}
+                />
+
+
+                </div>
+              
+                {/* {aboutinstrument.tabla} */}
+              </div>
+            </PopupSheet>
+          </div>
+
+          {/* tabla */}
+          <div>
+            <div>
+              <img
+                className=" max-w-[300px] bg--300 hover:opacity-50 "
+                onClick={() => setTrigg2(true)}
+                src={tablareal1}
+              />
+
+              <p className="w-full text-2xl font-bold flex place-content-center">
+                {" "}
+                Tabla
+              </p>
             </div>
 
             <PopupTabla

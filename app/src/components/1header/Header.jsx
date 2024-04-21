@@ -10,6 +10,10 @@ import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import { style } from "glamor";
 
+import { IoMdLogIn } from "react-icons/io";
+import { TbLogin } from "react-icons/tb";
+
+
 import Aplayer from "./Aplayer.jsx";
 
 // images
@@ -17,6 +21,7 @@ import kalasha from "../../assets/pngs/kalasha.png";
 import { useMyContext } from "../../App.jsx";
 
 import { useSelector } from "react-redux";
+
 
 function Header(props) {
   const { currentUser } = useSelector((state) => state.user);
@@ -180,7 +185,10 @@ function Header(props) {
                 className="w-full rounded-full  object-cover"
               />
             ) : (
-              <li>login</li>
+              <div>
+
+                <li className=""><TbLogin size={30} /></li>
+              </div>
             )}
           </Link>
         </div>
