@@ -8,16 +8,16 @@ import bmi from "../../assets/pngs/ganesha.png";
 import tabla2 from "../../assets/pngs/tabla2.png";
 import tabla from "../../assets/pngs/tabla.png";
 import veena from "../../assets/pngs/veena.png";
-
 import tablareal1 from "../../assets/pngs/tablareal1.png";
 import pakhawaj3 from "../../assets/pngs/pakhawaj3.png";
-
 import sheet from "../../assets/pngs/sheet.png";
 
 import { PortfolioData } from "../../assets/portfolio";
+import { aboutinstrument } from "../../assets/about";
+
+
 import SocialMedia from "../../components/SocialMedia";
 import PopupPakhawaj from "./PopupPakhawaj";
-import { aboutinstrument } from "../../assets/about";
 import PopupTabla from "./PopupTabla";
 import PopupSheet from "./PopupSheet";
 
@@ -89,7 +89,6 @@ const Page1 = (props) => {
                 About Pakhwaj :-
               </p>
               <div
-                // style={{backgroundColor:theme.body}}
                 className=" h-full w-full p-4 text-xl  "
               >
                 {aboutinstrument.pakhawaj}
@@ -105,12 +104,6 @@ const Page1 = (props) => {
                 onClick={() => setTrigg3(true)}
                 src={sheet}
               />
-
-              {/* <p className="w-full text-2xl font-bold flex place-content-center">
-                {" "}
-                Sheet
-              </p> */}
-
             </div>
 
             <PopupSheet
@@ -119,26 +112,15 @@ const Page1 = (props) => {
               trigg3={trigg3}
               theme={props.theme}
             >
-              {/* <p className="w-full px-4 text-xl font-bold pt-4  ">
-                {" "}
-                About Sheet :-
-              </p> */}
-
               <div
-                // style={{backgroundColor:theme.body}}
                 className=" h-full w-full p-4 text-xl  "
               >
-
                 <div className=" flex place-content-center items-center">
-                <img
-                  className=" max-w-[360px] rounded-md flex justify-center items-center"
-                  src={sheet}
-                />
-
-
+                  <img
+                    className=" max-w-[360px] rounded-md flex justify-center items-center"
+                    src={sheet}
+                  />
                 </div>
-              
-                {/* {aboutinstrument.tabla} */}
               </div>
             </PopupSheet>
           </div>
@@ -170,7 +152,6 @@ const Page1 = (props) => {
               </p>
 
               <div
-                // style={{backgroundColor:theme.body}}
                 className=" h-full w-full p-4 text-xl  "
               >
                 {aboutinstrument.tabla}

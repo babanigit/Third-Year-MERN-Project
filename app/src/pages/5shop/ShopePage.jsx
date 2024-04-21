@@ -11,7 +11,7 @@ const ShopePage = (props) => {
   return (
     <>
       <div>
-        <div className=" w-screen">
+        <div className="">
           <Header theme={props.theme} setTheme={props.setTheme} />
         </div>
 
