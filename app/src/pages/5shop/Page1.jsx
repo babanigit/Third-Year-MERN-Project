@@ -12,7 +12,7 @@ const Page1 = () => {
             </div>
           </div>
 
-          <div className=" bg-red-300 bg-opacity-50 text-2xl rounded-2xl p-7 w-full">
+          <div className=" bg-green-300 bg-opacity-50 text-2xl rounded-2xl p-7 w-full">
             {" "}
             {aboutinstrument.manu}{" "}
           </div>
