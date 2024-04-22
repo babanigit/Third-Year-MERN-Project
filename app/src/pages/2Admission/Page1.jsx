@@ -114,19 +114,19 @@ const Page1 = (props) => {
               />
 
               <div>
-                <label>Choose an instrument : </label>
+                <label>Choose an Instrument : </label>
                 <select
                   style={{
                     background: props.theme.body,
                     color: props.theme.text,
                     borderColor: props.theme.text,
                   }}
-                  className=" border-2 rounded-md w-full max-w-[100px]"
+                  className=" border-2 rounded-md w-full max-w-[150px]"
                   onChange={handleChange}
                   id="instrument"
                 >
                   <option value="tabla">Tabla</option>
-                  <option value="pakhawaj">Pakhawaj</option>
+                  <option value="pakhawaj">Pakhwaj</option>
                 </select>
               </div>
 
@@ -175,7 +175,7 @@ const Page1 = (props) => {
                 }
               >
                 {updateSuccess &&
-                  "admission added successfully!, will get back to you soon!"}
+                  "Admission Done Successfully!, will get back to you soon!"}
               </p>
             </form>
           </div>

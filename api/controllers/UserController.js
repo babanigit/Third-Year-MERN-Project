@@ -20,7 +20,7 @@ export const updateUser = async (req, res, next) => {
         adminState = true;
       } else {
         adminState = false;
-        throw createHttpError(401, " invalid admin pass ");
+        throw createHttpError(401, " Invalid admin pass! ");
       }
     }
 
@@ -51,13 +51,16 @@ export const admissionUpdate = async (req, res, next) => {
 
     const userCheck = await User.findById(req.params.id);
     if (userCheck.fullName != "default")
-      throw createHttpError(401, " user already have done admission.");
+      throw createHttpError(401, " User have already Admitted! ");
 
-    if (!fullName) throw createHttpError(401, " please enter full name! ");
+    if (!fullName) throw createHttpError(401, " Please enter Full Name! ");
 
-    if (!contact) throw createHttpError(401, " please add contact ");
+    if (!contact) throw createHttpError(401, " Please add Contact! ");
 
-    if (!date) throw createHttpError(401, " please select date! ");
+    if (!date) throw createHttpError(401, " Please select date! ");
+
+    if (contact.length != 10)
+      throw createHttpError(401, " Please Enter all Numbers! ");
 
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
@@ -109,7 +112,7 @@ export const deleteUser = async (req, res, next) => {
   }
   try {
     await User.findByIdAndDelete(req.params.id);
-    res.status(200).json("User has been deleted...");
+    res.status(200).json("User has been deleted!");
   } catch (error) {
     next(error);
   }

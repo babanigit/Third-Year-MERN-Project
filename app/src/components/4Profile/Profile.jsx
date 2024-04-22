@@ -286,7 +286,7 @@ const Profile = (props) => {
               }}
               type="password"
               id="adminC"
-              placeholder="become admin (enter the valid pass)"
+              placeholder="Become admin (Enter the Valid Pass)"
               
               className={
                 currentUser.isAdmin

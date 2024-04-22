@@ -1,27 +1,25 @@
 /* eslint-disable react/prop-types */
-import Header from "../../components/1header/Header"
+import Header from "../../components/1header/Header";
 // import Footer from "../../components/2footer/Footer"
-import Profile from "../../components/4Profile/Profile"
-
-
+import Profile from "../../components/4Profile/Profile";
 
 const ProfilePage = (props) => {
   return (
     <>
-    <div className=" h-screen ">
+      <div className=" ">
+        <div className=" fixed w-screen ">
+          <Header theme={props.theme} />
+        </div>
 
-    <div className=" fixed w-screen ">
+        <div className=" h-auto">
+          <div className=" h-[60px]"></div>
+          <Profile theme={props.theme} />
+        </div>
 
-    <Header theme={props.theme}  />
-    </div>
-
-    <Profile theme={props.theme}  />
-
-    {/* <Footer theme={props.theme}  /> */}
-    
-    </div>
+        {/* <Footer theme={props.theme}  /> */}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;
