@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 
 // import { FaLocationDot } from "react-icons/fa6";
 
-
 const Contact = (props) => {
   const form = useRef();
   const [formData, setFormData] = useState({});
@@ -43,31 +42,27 @@ const Contact = (props) => {
           console.log("FAILED...", error.text);
         }
       );
-
   };
 
   return (
     <>
-      <div className=" w-full h-auto grid grid-flow-col grid-cols-2 place-items-center p-3  bg-opacity-50 rounded-3xl bg-pink-300   ">
+      <div className=" w-full h-auto grid grid-flow-row md:grid-flow-col md:grid-cols-2 place-items-center p-3  bg-opacity-50 rounded-3xl bg-pink-300   ">
         <div className="  w-full max-w-[600px]  rounded-3xl grid place-items-center   bg-opacity-50  h-full place-content-center gap-4  ">
-          
+          <div className=" font-bold text-xl">mangeshpatole639@gmail.com</div>
+          <div>8446383926 / 9594537259</div>
 
-          <div className=" font-bold text-xl">
-          mangeshpatole639@gmail.com 
-          </div>
           <div>
-          8446383926 / 9594537259
-          </div>
-          
-          <div>
-          <SocialMedia />
+            <SocialMedia />
           </div>
 
           <div className="w-[60%] text-center font-extrabold flex  ">
-             {/* <FaLocationDot size={30} />  */}
-              Hanuman Mandir, Nalasopara Rd, Moregaon, Oswal Nagari, Nalasopara East, Virar, Nala Sopara, Maharashtra 401203
+            {/* <FaLocationDot size={30} />  */}
+            Hanuman Mandir, Nalasopara Rd, Moregaon, Oswal Nagari, Nalasopara
+            East, Virar, Nala Sopara, Maharashtra 401203
           </div>
         </div>
+
+        
 
         <div
           style={{ borderColor: props.theme.text }}

@@ -11,7 +11,8 @@ const SignUpPage = (props) => {
         <Header theme={props.theme} />
       </div>
 
-      <div>
+      <div className=" h-auto ">
+      <div className=" h-[60px]"></div>
         <SignUp theme={props.theme} />
       </div>
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import Header from "../../components/1header/Header";
-// import Footer from "../../components/2footer/Footer"
+import Footer from "../../components/2footer/Footer"
 import Profile from "../../components/4Profile/Profile";
 
 const ProfilePage = (props) => {
@@ -16,7 +16,7 @@ const ProfilePage = (props) => {
           <Profile theme={props.theme} />
         </div>
 
-        {/* <Footer theme={props.theme}  /> */}
+        <Footer theme={props.theme}  />
       </div>
     </>
   );

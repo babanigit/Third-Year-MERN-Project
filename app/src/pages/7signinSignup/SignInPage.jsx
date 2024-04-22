@@ -11,7 +11,8 @@ const SignInPage = (props) => {
         <Header theme={props.theme} />
       </div>
 
-      <div className=" ">
+      <div className=" h-auto ">
+      <div className=" h-[60px]"></div>
         <SignIn theme={props.theme} />
       </div>
 

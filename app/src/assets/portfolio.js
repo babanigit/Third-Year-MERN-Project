@@ -46,28 +46,28 @@ export const eventBMI = [
   {
     id: 1,
     bg: "bg-pink-300",
-
+    title: "Gurupoojan",
     content:
       "Gurupoojan, an annual event commemorating Guru Purnima, venerates the wisdom and knowledge imparted by teachers. Commencing with Ganesh poojan, students showcase solo performances on instruments such as Pakhwaj, Tabla, and Dholki. Devotional 'Bhajans' follow these presentations. Culminating the event, the teacher graces the audience with an instrumental performance, before delivering an inspiring speech. Thus, Gurupoojan serves as a testament to the profound impact of mentorship and learning.",
   },
   {
     id: 2,
     bg: "bg-green-300",
-
+    title: "Dindi",
     content:
       "A Dindi, also referred to as a rally in English, is a sacred religious event characterized by collective chanting of divine names and devotional singing. Participants traverse along a predetermined route, harmonizing their steps with the rhythmic cadence of bhajans, or devotional songs. The atmosphere is imbued with spiritual fervor as devotees unite in homage to the divine. This communal pilgrimage serves as a profound expression of faith and devotion, fostering a sense of unity and reverence among all who partake in this sacred journey.",
   },
   {
     id: 3,
     bg: "bg-blue-300",
-
+    title: "Swami Samarth Rally",
     content:
       "In 2023, the Swami Samarth rally unfolded as a deeply reverential homage to the revered spiritual figure Swami Samarth Maharaj. The event was a vibrant manifestation of devotion and reverence, drawing devotees from far and wide to honor the divine presence of Swami Samarth Maharaj.The rally commenced with solemn prayers and invocations, setting a sacred tone for the journey ahead. Participants, adorned in traditional attire, embarked on a spiritual pilgrimage, chanting the divine name of Swami Samarth and reciting sacred verses along the designated route. ",
   },
   {
     id: 4,
     bg: "bg-yellow-300",
-
+    title: "Gururpoojan 2023",
     content:
       "In the previous year, 2023, we observed Gurupoojan, an esteemed annual occasion dedicated to honoring Guru Purnima, a celebration that reveres the wisdom and teachings bestowed upon us by our revered mentors. The event commenced with the sacred Ganesh poojan, invoking blessings for a prosperous journey ahead. Following this auspicious beginning, students showcased their talents through soulful solo performances on traditional instruments like the Pakhwaj, Tabla, and Dholki.",
   },
