@@ -10,7 +10,7 @@ const Page3Map = () => {
         </div>
         <div className="grid  place-items-center place-content-center">
         <img className=" w-[120px] rounded-lg" src={temple} />
-            <div className=" text-2xl" >  ----------</div>
+            
         </div>
       </div>
     </div>

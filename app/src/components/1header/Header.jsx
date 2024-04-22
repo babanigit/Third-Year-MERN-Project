@@ -129,7 +129,7 @@ function Header(props) {
             tag={Link}
             style={{ borderRadius: 5, color: theme.text }}
           >
-            Events & About
+            AboutUs & Events
           </NavLink>
         </li>
 

@@ -70,7 +70,7 @@ const Page1 = (props) => {
   console.log("formData : ", formData);
   return (
     <>
-        <div className=" grid gap-2 h-screen place-items-center grid-flow-col grid-cols-2 p-4  bg-opacity-50 rounded-3xl  ">
+        <div className=" grid gap-2 h-auto place-items-center grid-flow-col grid-cols-2 p-4  bg-opacity-50 rounded-3xl  ">
           <div
             className=" max-w-[500px] w-full  p-7 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50  "
             style={{
@@ -95,7 +95,7 @@ const Page1 = (props) => {
                   borderColor: props.theme.text,
                 }}
                 type="fullName"
-                placeholder="full name"
+                placeholder="Full Name"
                 id="fullName"
                 className=" text-black w-full  bg-slate-100 p-3 rounded-lg border-2"
                 onChange={handleChange}

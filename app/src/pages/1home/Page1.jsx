@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 
-import bmi from "../../assets/pngs/ganesha.png";
+import bmi from "../../assets/pngs/bmi.jpg";
 import tabla2 from "../../assets/pngs/tabla2.png";
 import tabla from "../../assets/pngs/tabla.png";
 import veena from "../../assets/pngs/veena.png";

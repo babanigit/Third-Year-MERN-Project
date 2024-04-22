@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Header from "../../components/1header/Header";
 import Footer from "../../components/2footer/Footer";
+import Contact from "../../components/7Contact/Contact";
 import Page1 from "./Page1";
 import Page2Event from "./Page2Event";
 import Page3Map from "./Page3Map";
@@ -27,6 +28,10 @@ const Gallery = (props) => {
           <Page3Map />
           </div>
         </div>
+
+        <div className=" p-4">
+            <Contact theme={props.theme} />
+          </div>
 
         <div>
           <Footer theme={props.theme} />

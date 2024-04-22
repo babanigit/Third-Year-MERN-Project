@@ -5,6 +5,9 @@ import SocialMedia from "../SocialMedia";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+// import { FaLocationDot } from "react-icons/fa6";
+
+
 const Contact = (props) => {
   const form = useRef();
   const [formData, setFormData] = useState({});
@@ -57,11 +60,12 @@ const Contact = (props) => {
           </div>
           
           <div>
-
           <SocialMedia />
           </div>
-          <div className="w-[60%] text-center font-extrabold ">
-          Hanuman Mandir, Nalasopara Rd, Moregaon, Oswal Nagari, Nalasopara East, Virar, Nala Sopara, Maharashtra 401203
+
+          <div className="w-[60%] text-center font-extrabold flex  ">
+             {/* <FaLocationDot size={30} />  */}
+              Hanuman Mandir, Nalasopara Rd, Moregaon, Oswal Nagari, Nalasopara East, Virar, Nala Sopara, Maharashtra 401203
           </div>
         </div>
 
@@ -119,7 +123,7 @@ const Contact = (props) => {
               style={{ borderColor: props.theme.text }}
               className=" p-2 rounded-lg border-2  border-white w-full hover:bg-pink-400 "
             >
-              Send Email
+              Send
             </button>{" "}
             <p
               style={{ color: props.theme.text }}
