@@ -59,7 +59,7 @@ const AdminUser = () => {
         </div>
 
         <div className="overflow-x-auto">
-          <table className="rounded-xl p-2 md:p-4 w-full">
+          <table className="rounded-xl text-sm p-2 md:p-4 w-full">
             <thead>
               <tr className="">
                 <th className="bg-blue-400 bg-opacity-50 border-2 p-1 md:p-2 px-3 md:px-5 rounded-xl">

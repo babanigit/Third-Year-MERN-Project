@@ -69,13 +69,13 @@ const Page1 = (props) => {
 
         <section
           style={{ borderColor: props.theme.text }}
-          className=" bg-blue-200  rounded-3xl border-2  bg-opacity-50 grid grid-flow-row md:grid-flow-col place-items-center h-auto gap-4 md:gap-0 md:h-[300px] w-full"
+          className=" p-3 bg-blue-200  rounded-3xl border-2  bg-opacity-50 grid grid-flow-col place-items-center h-auto gap-4 md:gap-0 md:h-[300px] w-full"
         >
           {/* pakhawaj */}
           <div>
             <div>
               <img
-                className=" max-w-[150px] md:max-w-[300px] bg--300 hover:opacity-50 "
+                className=" max-w-[100px] md:max-w-[300px] bg--300 hover:opacity-50 "
                 onClick={() => setTrigg(true)}
                 src={pakhawaj3}
               />
@@ -96,7 +96,7 @@ const Page1 = (props) => {
                 {" "}
                 About Pakhwaj :-
               </p>
-              <div className=" h-full w-full p-4 md:text-xl  ">
+              <div className=" h-full w-full p-4 text-sm md:text-xl  ">
                 {aboutinstrument.pakhawaj}
               </div>
             </PopupPakhawaj>
@@ -106,7 +106,7 @@ const Page1 = (props) => {
           <div>
             <div>
               <img
-                className=" max-h-[140px] md:max-h-[200px] hover:opacity-50 rounded-md "
+                className=" max-h-[150px] md:max-h-[250px] hover:opacity-50 rounded-md "
                 onClick={() => setTrigg3(true)}
                 src={sheet}
               />
@@ -133,7 +133,7 @@ const Page1 = (props) => {
           <div>
             <div>
               <img
-                className=" max-w-[150px] md:max-w-[300px]  bg--300 hover:opacity-50 "
+                className=" max-w-[100px] md:max-w-[300px]  bg--300 hover:opacity-50 "
                 onClick={() => setTrigg2(true)}
                 src={tablareal1}
               />
@@ -155,7 +155,7 @@ const Page1 = (props) => {
                 About Tabla :-
               </p>
 
-              <div className=" h-full w-full p-4 text-xl  ">
+              <div className=" h-full w-full p-4 text-sm md:text-xl  ">
                 {aboutinstrument.tabla}
               </div>
             </PopupTabla>

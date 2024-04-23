@@ -76,8 +76,6 @@ const Profile = (props) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
 
-
-
     // const { id, value } = e.target;
 
     // console.log(id)
@@ -100,8 +98,6 @@ const Profile = (props) => {
     //   const { adminC, ...formDataWithoutAdminC } = formData;
     //   setFormData(formDataWithoutAdminC);
     // }
-
-
   };
 
   console.log("formData : ", formData);
@@ -188,7 +184,6 @@ const Profile = (props) => {
 
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
-
     } catch (error) {
       dispatch(updateUserFailure(error));
     }
@@ -202,7 +197,7 @@ const Profile = (props) => {
         style={{ background: props.theme.body, color: props.theme.text }}
         className=" max-w-lg m-auto flex place-items-center place-content-center h-screen "
       >
-        <div className="  max-w-lg mx-auto   w-screen">
+        <div className=" p-5 max-w-lg mx-auto   w-screen">
           {/* <h1 className="text-3xl font-semibold text-center my-7">Profile</h1> */}
           <form onSubmit={handleSubmit} className="flex h-auto flex-col gap-4">
             <input
@@ -287,11 +282,11 @@ const Profile = (props) => {
               type="password"
               id="adminC"
               placeholder="Become admin (Enter the Valid Pass)"
-              
               className={
                 currentUser.isAdmin
-                ? "hidden bg-slate-100 rounded-lg p-3 border-2 "
-                :"bg-slate-100 rounded-lg p-3 border-2 "}
+                  ? "hidden bg-slate-100 rounded-lg p-3 border-2 "
+                  : "bg-slate-100 rounded-lg p-3 border-2 "
+              }
               onChange={handleChange}
             />
             <button
@@ -301,23 +296,29 @@ const Profile = (props) => {
               {loading ? "Loading..." : "Update"}
             </button>
           </form>
-          <div className="flex justify-between place-items-center mt-5">
-            <span
-              onClick={handleDeleteAccount}
-              className=" cursor-pointer border-2 p-2 rounded-md border-red-500 "
-              style={{ background: props.theme.body, color: props.theme.text }}
-            >
-              Delete Account
-            </span>
+          
+          <div className="flex ">
+            <div className="flex justify-between place-items-center mt-5 w-full gap-2 ">
+              <span
+                onClick={handleDeleteAccount}
+                className=" cursor-pointer border-2 p-1 md:p-2 rounded-md border-red-500 "
+                style={{
+                  background: props.theme.body,
+                  color: props.theme.text,
+                }}
+              >
+                Delete Account
+              </span>
 
-            <div className="flex gap-2">
               {currentUser.isAdmin && (
                 <>
                   <Link
                     className="cursor-pointer border-2 p-2 rounded-md border-blue-500 "
                     to="/admin"
                   >
-                    <span className="text-blue-500 flex place-items-center ">Admin <RiAdminFill /> </span>
+                    <span className="text-blue-500 flex place-items-center ">
+                      Admin <RiAdminFill />{" "}
+                    </span>
                   </Link>
 
                   <Link
@@ -336,7 +337,7 @@ const Profile = (props) => {
 
               <span
                 onClick={handleSignOut}
-                className="cursor-pointer border-2 p-2 rounded-md border-red-500 "
+                className="cursor-pointer border-2 p-1 md:p-2 rounded-md border-red-500 "
                 style={{
                   background: props.theme.body,
                   color: props.theme.text,
@@ -346,6 +347,7 @@ const Profile = (props) => {
               </span>
             </div>
           </div>
+
           <p className="text-red-700 mt-5">
             {error ? errorData.error || "!" : ""}
           </p>

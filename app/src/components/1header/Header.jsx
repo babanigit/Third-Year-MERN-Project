@@ -100,7 +100,7 @@ function Header(props) {
               <img src={kalasha} />
             </div>
           </div>
-          <div className=" text-sm">{greeting.logo_desc}</div>
+          <div className=" hidden md:block text-sm">{greeting.logo_desc}</div>
         </div>
       </NavLink>
 

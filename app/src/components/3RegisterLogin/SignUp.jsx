@@ -7,7 +7,6 @@ import OAuth from "../5GoogleAuth/OAuth";
 
 import man from "../../assets/pngs/man.png";
 
-
 const SignUp = (props) => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(false);
@@ -59,10 +58,8 @@ const SignUp = (props) => {
         style={{ background: props.theme.body, color: props.theme.text }}
         className=" max-w-lg m-auto h-screen grid place-content-center "
       >
-        <div className="  max-w-lg mx-auto   w-screen grid gap-3 ">
-
-          
-        <div className=" flex place-content-center place-items-center">
+        <div className="  max-w-lg mx-auto   w-screen grid gap-3 p-5 ">
+          <div className=" flex place-content-center place-items-center">
             <div>
               <img className=" w-12" src={man} alt="women" />
             </div>

@@ -70,125 +70,122 @@ const Page1 = (props) => {
   console.log("formData : ", formData);
   return (
     <>
-        <div className=" grid gap-2 h-auto place-items-center grid-flow-col grid-cols-2 p-4  bg-opacity-50 rounded-3xl  ">
-          <div
-            className=" max-w-[500px] w-full  p-7 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50  "
-            style={{
-              // background: props.theme.body,
-              // color: props.theme.text,
-              borderColor: props.theme.text,
-            }}
-          >
-            <div className=" grid grid-flow-col place-items-center ">
-              <img className=" w-[120px] rounded-3xl " src={bmi} />
+      <div className=" grid gap-2 h-auto place-items-center grid-flow-row md:grid-flow-col md:grid-cols-2 p-4  bg-opacity-50 rounded-3xl  ">
+        <div
+          className=" max-w-[500px] w-full  p-7 border-2 rounded-3xl m-3 bg-blue-300 bg-opacity-50  "
+          style={{
+            // background: props.theme.body,
+            // color: props.theme.text,
+            borderColor: props.theme.text,
+          }}
+        >
+          <div className=" grid grid-flow-col place-items-center ">
+            <img className=" w-[120px] rounded-3xl " src={bmi} />
+          </div>
+
+          <br />
+          <form onSubmit={handleSubmit} className=" w-full flex flex-col gap-4">
+            <input
+              style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
+              type="fullName"
+              placeholder="Full Name"
+              id="fullName"
+              className=" text-black w-full  bg-slate-100 p-3 rounded-lg border-2"
+              onChange={handleChange}
+            />
+            <input
+              style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
+              type="contact"
+              placeholder="Contact Number"
+              id="contact"
+              className=" text-black w-full bg-slate-100 p-3 rounded-lg border-2"
+              onChange={handleChange}
+            />
+
+            <div>
+              <label>Choose an Instrument : </label>
+              <select
+                style={{
+                  background: props.theme.body,
+                  color: props.theme.text,
+                  borderColor: props.theme.text,
+                }}
+                className=" border-2 rounded-md w-full max-w-[150px]"
+                onChange={handleChange}
+                id="instrument"
+              >
+                <option value="tabla">Tabla</option>
+                <option value="pakhawaj">Pakhwaj</option>
+              </select>
             </div>
 
-            <br />
-            <form
-              onSubmit={handleSubmit}
-              className=" w-full flex flex-col gap-4"
+            <div>
+              <label>Date of Birth : </label>
+
+              <Input
+                type="date"
+                placeholder="Enter BirthDate"
+                id="date"
+                value="date"
+                onChange={handleChange}
+                name="birthdate"
+                className=" w-12 border-2 rounded-md"
+                style={{
+                  background: props.theme.body,
+                  color: props.theme.text,
+                  borderColor: props.theme.text,
+                }}
+              />
+            </div>
+
+            <button
+              style={{
+                background: props.theme.text,
+                color: props.theme.body,
+              }}
+              // disabled={loading}
+              className=" w-full bg-slate-700  p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
             >
-              <input
-                style={{
-                  background: props.theme.body,
-                  color: props.theme.text,
-                  borderColor: props.theme.text,
-                }}
-                type="fullName"
-                placeholder="Full Name"
-                id="fullName"
-                className=" text-black w-full  bg-slate-100 p-3 rounded-lg border-2"
-                onChange={handleChange}
-              />
-              <input
-                style={{
-                  background: props.theme.body,
-                  color: props.theme.text,
-                  borderColor: props.theme.text,
-                }}
-                type="contact"
-                placeholder="Contact Number"
-                id="contact"
-                className=" text-black w-full bg-slate-100 p-3 rounded-lg border-2"
-                onChange={handleChange}
-              />
+              {false ? "Loading..." : "submit"}
+            </button>
+            <p
+              style={{ color: props.theme.text }}
+              className={
+                error && " bg-red-500 bg-opacity-50 mt-5 rounded-md p-3 "
+              }
+            >
+              {error ? errorData.error || "you have'nt logged in :(" : ""}
+            </p>
+            <p
+              style={{ color: props.theme.text }}
+              className={
+                updateSuccess &&
+                " bg-green-500 bg-opacity-50 mt-5 rounded-md p-3"
+              }
+            >
+              {updateSuccess &&
+                "Admission Done Successfully!, will get back to you soon!"}
+            </p>
+          </form>
+        </div>
+        <div className="  w-full grid place-items-center  bg-opacity-45 rounded-full ">
+          <div className=" ">
+            {/* <img src={kumkuma} /> */}
 
-              <div>
-                <label>Choose an Instrument : </label>
-                <select
-                  style={{
-                    background: props.theme.body,
-                    color: props.theme.text,
-                    borderColor: props.theme.text,
-                  }}
-                  className=" border-2 rounded-md w-full max-w-[150px]"
-                  onChange={handleChange}
-                  id="instrument"
-                >
-                  <option value="tabla">Tabla</option>
-                  <option value="pakhawaj">Pakhwaj</option>
-                </select>
-              </div>
-
-              <div>
-                <label>Date of Birth : </label>
-
-                <Input
-                  type="date"
-                  placeholder="Enter BirthDate"
-                  id="date"
-                  value="date"
-                  onChange={handleChange}
-                  name="birthdate"
-                  className=" w-12 border-2 rounded-md"
-                  style={{
-                    background: props.theme.body,
-                    color: props.theme.text,
-                    borderColor: props.theme.text,
-                  }}
-                />
-              </div>
-
-              <button
-                style={{
-                  background: props.theme.text,
-                  color: props.theme.body,
-                }}
-                // disabled={loading}
-                className=" w-full bg-slate-700  p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
-              >
-                {false ? "Loading..." : "submit"}
-              </button>
-              <p
-                style={{ color: props.theme.text }}
-                className={
-                  error && " bg-red-500 bg-opacity-50 mt-5 rounded-md p-3 "
-                }
-              >
-                {error ? errorData.error || "you have'nt logged in :(" : ""}
-              </p>
-              <p
-                style={{ color: props.theme.text }}
-                className={
-                  updateSuccess &&
-                  " bg-green-500 bg-opacity-50 mt-5 rounded-md p-3"
-                }
-              >
-                {updateSuccess &&
-                  "Admission Done Successfully!, will get back to you soon!"}
-              </p>
-            </form>
-          </div>
-          <div className="  w-full grid place-items-center  bg-opacity-45 rounded-full ">
-            <div className=" ">
-              {/* <img src={kumkuma} /> */}
-
-              <div className=" hidden md:block">
-                <Fees />
-              </div>
+            <div className="">
+              <Fees />
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 };

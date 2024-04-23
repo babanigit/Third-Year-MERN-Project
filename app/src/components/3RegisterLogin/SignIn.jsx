@@ -62,7 +62,7 @@ const SignIn = (props) => {
         style={{ background: props.theme.body, color: props.theme.text }}
         className=" max-w-lg m-auto h-screen grid place-content-center "
       >
-        <div className="  max-w-lg mx-auto   w-screen grid gap-3 ">
+        <div className="  max-w-lg mx-auto   w-screen grid gap-3 p-5 ">
           <div className=" flex place-content-center place-items-center">
             <div>
               <img className=" w-12" src={woman} alt="women" />
