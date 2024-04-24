@@ -148,6 +148,11 @@ const Page1 = (props) => {
               /> */}
 
               <input
+               style={{
+                background: props.theme.body,
+                color: props.theme.text,
+                borderColor: props.theme.text,
+              }}
                 type="text"
                 //  value="date"
                 id="date"
