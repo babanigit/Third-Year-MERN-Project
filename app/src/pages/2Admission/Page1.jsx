@@ -19,6 +19,8 @@ import {
 import { Form, Label, Input, Button, Col } from "reactstrap";
 import bmi from "../../assets/pngs/bmi.jpg";
 import Fees from "./Fees";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 // import Contact from "../../components/7Contact/Contact";
 
@@ -130,20 +132,38 @@ const Page1 = (props) => {
             <div>
               <label>Date of Birth : </label>
 
-              <Input
+              {/* <Input
                 type="date"
                 placeholder="Enter BirthDate"
                 id="date"
                 value="date"
                 onChange={handleChange}
                 name="birthdate"
-                className=" w-12 border-2 rounded-md"
+                className=" border-2 rounded-md"
                 style={{
                   background: props.theme.body,
                   color: props.theme.text,
                   borderColor: props.theme.text,
                 }}
+              /> */}
+
+              <input
+                type="text"
+                //  value="date"
+                id="date"
+                onChange={handleChange}
+                className=" border-2 rounded-md w-full max-w-[150px]"
               />
+
+              {/* <div>
+                <DatePicker
+                  type="text"
+                  //  value="date"
+                  id="date"
+                  //  selected={date}
+                  onChange={() => handleChange}
+                />
+              </div> */}
             </div>
 
             <button
