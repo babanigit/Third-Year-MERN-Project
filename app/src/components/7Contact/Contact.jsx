@@ -111,7 +111,7 @@ const Contact = (props) => {
                 background: props.theme.body,
                 borderColor: props.theme.text,
               }}
-              placeholder="MESSAGE"
+              placeholder="ASK US QUESTIONS!"
               className=" h-[100px]  p-2 rounded-lg border-2  border-white  w-full "
             />
             <button

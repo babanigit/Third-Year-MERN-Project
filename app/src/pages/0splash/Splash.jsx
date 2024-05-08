@@ -12,8 +12,8 @@ function Splash(props) {
   ) : (
     <div
     style={{ background: props.theme.body, color: props.theme.text }}
-    className=" h-screen grid place-content-center">
-loading
+    className=" h-screen grid place-content-center font-bold">
+LOADING
     </div>
   );
 }
