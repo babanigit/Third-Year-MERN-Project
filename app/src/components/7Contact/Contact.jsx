@@ -57,8 +57,7 @@ const Contact = (props) => {
 
           <div className="w-[60%] text-center font-extrabold flex  ">
             {/* <FaLocationDot size={30} />  */}
-            Hanuman Mandir, Nalasopara Rd, Moregaon, Oswal Nagari, Nalasopara
-            East, Virar, Nala Sopara, Maharashtra 401203
+            Shop no.1 Sai Shraddha Apartment, opposite Hanuman Mandir, Moregoan, Nalasopara(E), Mumbai-401203
           </div>
         </div>
 

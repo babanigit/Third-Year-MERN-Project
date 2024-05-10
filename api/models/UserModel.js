@@ -37,7 +37,7 @@ const userSchema = new Mongoose.Schema(
     },
     instrument: {
       type: String,
-      default: "Tabla"
+      default: "none"
     },
     isAdmin: {
       type: Boolean,
