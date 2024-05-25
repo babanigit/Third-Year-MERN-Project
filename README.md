@@ -5,4 +5,4 @@ third year project using mern
 ![ss3](ss/bmi3.png)
 ![ss4](ss/bmi4.png)
 ![ss5](ss/bmi5.png)
-
+![ss6](ss/bmi6.png)
