@@ -32,7 +32,8 @@
     "react-social-icons": "^6.16.0",
     "reactstrap": "^9.2.2",
     "redux-persist": "^6.0.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "third-year-mern-project": "file:.."
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
